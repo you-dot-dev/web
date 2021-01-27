@@ -595,3 +595,26 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+/* Rip this out later :) */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.coming-soon {
+	margin: 4em auto 0;
+	max-width: 960px;
+	text-align: center;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 175%;
+}
+
+.coming-soon h2 {
+	font-family: 'Shadows Into Light', cursive;
+}
+.coming-soon img {
+	max-width: 300px;
+}
+
+.coming-soon a:link {
+	text-decoration: none;
+	color: #009B68;
+}
