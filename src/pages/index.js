@@ -1,18 +1,18 @@
 import React from "react"
 
-import youDevLogo from "../images/you-dev-logo.png"
-import "../components/layout.css";
+import "../components/layout.scss";
 import SEO from "../components/seo"
+import Layout from '../components/layout'
 
 const IndexPage = () => (
-  <div className="coming-soon">
+  <Layout>
     <SEO title="Home" />
-    <img src={youDevLogo} alt="You.Dev logo" />
+    <div className="parallax"></div>
+    <div className="coming-soon">
     <h2>coming soon!</h2>
     <p>Fun and fast full-stack training for engineers of all levels.</p>
-    <p>Angelika was here.</p>
-    <a href="mailto:paul@you.dev">Contact Us</a> for jobs opportunities.
-  </div>
+    </div>
+  </Layout>
 )
 
 export default IndexPage
