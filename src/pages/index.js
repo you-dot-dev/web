@@ -7,7 +7,9 @@ import Layout from '../components/layout'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div className="parallax"></div>
+    <div className="parallax">
+      <h1>HELLO FROM ANGELIKA</h1>
+    </div>
     <div className="coming-soon">
     <h2>coming soon!</h2>
     <p>Fun and fast full-stack training for engineers of all levels.</p>
