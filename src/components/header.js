@@ -14,6 +14,16 @@ const Header = ({ siteTitle }) => (
       </ul>
       <ul className="account-menu">
         <li>
+          <h4 
+            style= {{
+              padding:'15px',
+              color:'#fff',
+              fontFamily: "'Shadows Into Light', cursive",
+              fontSize:'26px'
+            }}
+          >me@angelika.dev</h4>
+        </li>
+        <li>
           <Link to="/account">
             <img src={userPNG}  style={{height:'40px', width:"40px"}} alt="user icon"/>
           </Link>
