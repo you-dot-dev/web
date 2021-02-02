@@ -10,6 +10,7 @@ import Design from '../images/design.svg'
 
 
 const IndexPage = () => (
+  
   <Layout>
     <SEO title="Home" />
     <div className="parallax">
@@ -31,9 +32,9 @@ const IndexPage = () => (
          'Designers',
          'Engineers'
         ]}
+        nextTextDelay={2000}
+        typeSpeed={50}
         loop={true}
-        nextTextDelay={500}
-        typeSpeed={30}
       />
       </div>
       <h1 className="logo-header">You.Dev</h1>
@@ -42,7 +43,7 @@ const IndexPage = () => (
 
     <div className="coming-soon">
     <h2>coming soon!</h2>
-    <p>Fun and fast full-stack training for engineers of all levels.</p>
+    <p style={{color:'rgb(32,209,126)'}}>Fun and fast full-stack training for engineers of all levels.</p>
     </div>
 
     <section className="flat-icons">
