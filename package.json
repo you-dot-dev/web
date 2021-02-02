@@ -22,7 +22,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "react-typewriter-effect": "^1.0.2",
+    "react-typewriter-effect": "git+https://github.com/fractal/react-typewriter-effect.git",
     "sass": "^1.32.5"
   },
   "devDependencies": {
