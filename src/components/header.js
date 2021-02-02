@@ -23,9 +23,14 @@ const Header = ({ siteTitle }) => (
             }}
           >me@angelika.dev</h4>
         </li>
-        <li>
+        <li className="dropdown-menu">
           <Link to="/account">
             <img src={userPNG}  style={{height:'40px', width:"40px"}} alt="user icon"/>
+            <div className="dropdown-content">
+              <Link>Account</Link>
+              <Link>Settings</Link>
+              <Link>Logout</Link>
+            </div>
           </Link>
         </li>
       </ul>  
