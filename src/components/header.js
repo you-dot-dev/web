@@ -19,13 +19,13 @@ const Header = ({ siteTitle }) => (
               padding:'15px',
               color:'#fff',
               fontFamily: "'Shadows Into Light', cursive",
-              fontSize:'26px'
+              fontSize:'18px'
             }}
           >me@angelika.dev</h4>
         </li>
         <li className="dropdown-menu">
           <Link to="/account">
-            <img src={userPNG}  style={{height:'40px', width:"40px"}} alt="user icon"/>
+            <img src={userPNG}  style={{height:'30px', width:"30px", paddingRight:"5px"}} alt="user icon"/>
             <div className="dropdown-content">
               <Link>Account</Link>
               <Link>Settings</Link>
