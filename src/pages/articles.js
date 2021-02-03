@@ -16,17 +16,17 @@ const Articles = ({data}) => {
       return article.frontmatter.image == image.fluid.originalName
     });
 
-    console.log(articleImage)
+    const displayDate = new Date(article.frontmatter.date).toDateString();
 
     return (
       <div className="article-link">
-        <h1><a href={article.frontmatter.slug}>{article.frontmatter.title}</a></h1>
-        <p>{article.frontmatter.date}</p>
-        <p className="article-img" style={{
+        <div className="article-img" style={{
           background: `url(${articleImage.fluid.originalImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center center"
-        }}></p>
+        }}></div>
+        <h1><a href={article.frontmatter.slug}>{article.frontmatter.title}</a></h1>
+        <p>{displayDate}</p>
         <p>{article.excerpt}</p>
         <p>{article.frontmatter.author}</p>
       </div>
@@ -36,9 +36,11 @@ const Articles = ({data}) => {
   return (
   <Layout>
     <SEO title="Page two" />
-    <h1 className="x-large text-center text-dark my-2">All Articles</h1>
-    <p className=" text-center my-2">An extensive and comprehensive list of articles by the author. Subscribe to view 100+ in-depth collections on all topics regarding software architecure and applications.</p>
-
+    <div className="article-header">
+      <h1>All Articles</h1>
+      <p>An extensive and comprehensive list of articles by the author. <br/> Subscribe to view 100+ in-depth collections on all topics regarding software architecure and applications.</p>
+      <h2 class="divider line one-line" contenteditable>&lt; / &gt;</h2>
+    </div>  
     <div className="article-list">
       {listOfArticles}
     </div>
