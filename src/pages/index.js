@@ -50,19 +50,19 @@ const IndexPage = () => (
         <div>
           <img src={LightBulb} alt="lightbulb"/>
           <div className="homepage-paragraph">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dicta beatae veritatis eius quo corrupti deserunt exercitationem qui ad repellendus.</p>
+            <p>Loads of free articles for engineers of all levels. From cheat-sheets to walk-throughs, grab quick reference for the  issue at hand. </p>
           </div>
         </div>
         <div>
           <img src={Infrastructure} alt="lightbulb"/>
           <div className="homepage-paragraph">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dicta beatae veritatis eius quo corrupti deserunt exercitationem qui ad repellendus.</p>
+            <p>Hours of high-quality screen casts. Topics covered: softare developement, software architecture, how to read documentation, infrastructure, security, error-handling/ debugging. </p>
           </div>
         </div>
         <div>
           <img src={Design} alt="lightbulb"/>
           <div className="homepage-paragraph">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dicta beatae veritatis eius quo corrupti deserunt exercitationem qui ad repellendus.</p>
+            <p>Easily track your progress with a skill map. See everything you've learned so far and how the topics relate to each other.</p>
           </div>
         </div>
        </section>
