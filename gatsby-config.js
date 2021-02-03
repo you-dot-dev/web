@@ -25,6 +25,13 @@ module.exports = {
         path: `${__dirname}/src/articles`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/screencasts`,
+      },
+    },
 
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
