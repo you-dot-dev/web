@@ -10,7 +10,9 @@ const Articles = ({data}) => {
   console.log("articles:", articles);
   console.log("allImageSharp:", data.allImageSharp);
 
-  const listOfArticles = articles.map( (article) => {
+  const listOfArticles = articles
+  .filter( (article) => { return article.frontmatter.video_url == null } )
+  .map( (article) => {
 
     let [articleImage] = data.allImageSharp.nodes.filter( (image) => {
       return article.frontmatter.image == image.fluid.originalName
@@ -60,6 +62,7 @@ query Articles {
         date
         author
         image
+        video_url
       }
       excerpt
     }
