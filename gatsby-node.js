@@ -10,6 +10,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const articleTemplate = require.resolve(`./src/templates/article.js`)
+  const screencastTemplate = require.resolve(`./src/templates/screencast.js`)
 
   const result = await graphql(`
     {
@@ -21,6 +22,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               slug
+              video_url
             }
           }
         }
@@ -35,13 +37,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.slug,
-      component: articleTemplate,
-      context: {
-        // additional data can be passed via context
-        slug: node.frontmatter.slug,
-      },
-    })
+    
+    if (node.frontmatter.video_url) {
+      createPage({
+        path: node.frontmatter.slug,
+        component: screencastTemplate,
+        context: {
+          // additional data can be passed via context
+          slug: node.frontmatter.slug,
+          videoUrl: node.frontmatter.video_url
+        },
+      })
+    } else {
+      createPage({
+        path: node.frontmatter.slug,
+        component: articleTemplate,
+        context: {
+          // additional data can be passed via context
+          slug: node.frontmatter.slug,
+        },
+      })
+    }
+
+    
   })
 }
