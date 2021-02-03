@@ -4,8 +4,10 @@ import AuthReducer from './AuthReducer';
 import axios from 'axios';
 import {
   REGISTER_USER,
-  LOGOUT_USER,
   SIGNIN_USER,
+  LOGOUT_USER,
+  SIGNIN_USER_SUCCESS,
+  SIGNIN_USER_FAIL,
   REGISTER_USER_FAIL,
   REGISTER_USER_SUCCESS
 }  from '../types';
@@ -43,13 +45,35 @@ const AuthState = (props) => {
     }
   }
 
+  const signInUser = async (formData) => {
+    dispatch({
+      type:SIGNIN_USER
+    });
+
+    try {
+      let user = await axios.post('http://localhost:7890/auth/signin',
+        formData, { headers: {'Content-Type' : 'application/json'}}
+      )
+      console.log('user:', user);
+      dispatch({
+        type:SIGNIN_USER_SUCCESS
+      })
+    } catch (error) {
+      dispatch({
+        type:SIGNIN_USER_FAIL,
+        payload:error
+      })
+    }
+  }
+ 
   return (
     <AuthContext.Provider 
       value={{
         user: state.user,
         isAuthenticated: state.isAuthenticated,
         loading: state.loading,
-        registerUser
+        registerUser,
+        signInUser
       }}>
         {props.children}
     </AuthContext.Provider>
