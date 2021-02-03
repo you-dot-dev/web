@@ -42,9 +42,10 @@ const IndexPage = () => (
     </div>
 
     <div className="coming-soon">
-    <h2>coming soon!</h2>
+    <h2>ready to get started?</h2>
     <p style={{color:'rgb(32,209,126)'}}>Fun and fast full-stack training for engineers of all levels.</p>
     </div>
+    <h2 class="divider line one-line" contenteditable>&lt; / &gt;</h2>
 
     <section className="flat-icons">
         <div>
