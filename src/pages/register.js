@@ -65,13 +65,17 @@ const Register = () => {
       
 
       <button
-        className="reg-log"
+        className="btn"
         type="submit"
         onClick={(e) => {handleSubmit(e)}}>sign up </button>
 
-       <p className="bottom-text"> By clicking the Sign Up button, you agree to our Terms and Conditions and Privacy Policy</p>
+       <p> By clicking the Sign Up button, you agree to our Terms and Conditions and Privacy Policy</p>
     </div>
       
+      <div className="about">
+        <h1>About youdev</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non iusto suscipit reprehenderit! Quasi incidunt, accusamus doloribus aliquam laborum repudiandae doloremque earum nemo pariatur adipisci eos laboriosam animi aliquid modi libero harum illum ipsum maiores ipsam necessitatibus at quas. Placeat, magnam! Deserunt repudiandae suscipit ad veritatis neque debitis, architecto harum itaque, sunt nemo commodi cum vel! Necessitatibus quos iure cupiditate reprehenderit voluptas praesentium repudiandae velit, inventore nesciunt porro accusamus omnis hic consequatur, sunt vitae doloribus autem, labore nam aspernatur! Reiciendis deleniti corporis numquam repudiandae nobis recusandae perspiciatis voluptatibus nisi! Maxime iste eum at hic eius necessitatibus dicta inventore laboriosam tenetur sapiente.</p>
+      </div>
     </div>
     </Layout>
   )
