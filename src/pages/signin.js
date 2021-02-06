@@ -1,9 +1,9 @@
 import React, {useState, useContext} from 'react'
-import axios from 'axios'
 import Layout from '../components/layout'
 import AuthContext from '../contexts/auth/AuthContext'
+import {navigate} from '@reach/router';
 
-const SignIn = () => {
+const SignIn = (props) => {
 
   const authContext = useContext(AuthContext);
 
@@ -15,6 +15,7 @@ const SignIn = () => {
   function handleSubmit(e){
     e.preventDefault();
     signInUser({ email, password});
+    navigate('/skillmap')
     /*
     axios.post('http://localhost:7890/auth/register', {
       username,

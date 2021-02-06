@@ -27,10 +27,9 @@ const Articles = ({data}) => {
           backgroundSize: "cover",
           backgroundPosition: "center center"
         }}></div>
-        <h1><a href={article.frontmatter.slug}>{article.frontmatter.title}</a></h1>
+        <h3><a href={article.frontmatter.slug}>{article.frontmatter.title}</a></h3>
         <p>{displayDate}</p>
         <p>{article.excerpt}</p>
-        <p>{article.frontmatter.author}</p>
       </div>
     );
   });

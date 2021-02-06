@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import userPNG from '../images/user.svg'
 
+
 const Header = ({ siteTitle }) => (
   <header>
     <nav>
@@ -21,7 +22,7 @@ const Header = ({ siteTitle }) => (
               fontFamily: "'Shadows Into Light', cursive",
               fontSize:'18px'
             }}
-          >me@angelika.dev</h4>
+          > me@angelika.dev</h4>
         </li>
         <li className="dropdown-menu">
           <Link to="/account">

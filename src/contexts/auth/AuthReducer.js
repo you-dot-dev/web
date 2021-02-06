@@ -1,7 +1,9 @@
 import {
   REGISTER_USER,
   REGISTER_USER_FAIL,
-  REGISTER_USER_SUCCESS
+  REGISTER_USER_SUCCESS,
+  SIGNIN_USER_SUCCESS,
+  SIGNIN_USER_FAIL
 } from "../types";
 
 export default (state, action) => {
@@ -21,6 +23,12 @@ export default (state, action) => {
       return {
         ...state,
         loading: false,
+        user: action.payload
+      }
+    case SIGNIN_USER_SUCCESS:
+      return{
+        ...state,
+        isAuthenticated:true,
         user: action.payload
       }
     default:

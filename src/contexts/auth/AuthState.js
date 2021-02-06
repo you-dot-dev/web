@@ -2,6 +2,8 @@ import React, {useReducer} from 'react';
 import AuthContext from './AuthContext';
 import AuthReducer from './AuthReducer';
 import axios from 'axios';
+import crypto from 'crypto';
+
 import {
   REGISTER_USER,
   SIGNIN_USER,
@@ -9,7 +11,8 @@ import {
   SIGNIN_USER_SUCCESS,
   SIGNIN_USER_FAIL,
   REGISTER_USER_FAIL,
-  REGISTER_USER_SUCCESS
+  REGISTER_USER_SUCCESS,
+  GET_PROFILE_PICTURE
 }  from '../types';
 
 
@@ -45,6 +48,22 @@ const AuthState = (props) => {
     }
   }
 
+  const getProfilePicture = async (email) => {
+     const hashedEmail = crypto.createHash("md5").update(email).digest('hex');
+
+     try {
+       let profImg = await axios.get('https://www.gravatar.com/' + hashedEmail + '.json');
+       console.log(profImg);
+      dispatch({
+        type:GET_PROFILE_PICTURE
+      })
+
+     } catch (error) {
+       console.log(error)
+     }
+
+  }
+
   const signInUser = async (formData) => {
     dispatch({
       type:SIGNIN_USER
@@ -54,9 +73,12 @@ const AuthState = (props) => {
       let user = await axios.post('http://localhost:7890/auth/signin',
         formData, { headers: {'Content-Type' : 'application/json'}}
       )
-      console.log('user:', user);
+      console.log('user.data.data:', user.data.data);
+      getProfilePicture(user.data.data.email)
+
       dispatch({
-        type:SIGNIN_USER_SUCCESS
+        type:SIGNIN_USER_SUCCESS,
+        payload:user.data.data
       })
     } catch (error) {
       dispatch({
@@ -73,7 +95,8 @@ const AuthState = (props) => {
         isAuthenticated: state.isAuthenticated,
         loading: state.loading,
         registerUser,
-        signInUser
+        signInUser,
+        getProfilePicture
       }}>
         {props.children}
     </AuthContext.Provider>

@@ -1,7 +1,7 @@
 ---
 slug: "/articles/test-article"
 date: "2021-01-30"
-title: "SPA's"
+title: "Applications"
 author: "Paul <paul@you.dev>"
 image: 'SPA.jpg'
 

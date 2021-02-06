@@ -551,13 +551,14 @@ header {
 .home-page-header {
   display:flex;
   justify-content: space-between;
-  padding:150px;
+  padding:70px ;
 }
 
 .typewriter-header{
   font-size:40px;
   color: rgb(32,209,126);
-  filter:brightness(1.5)
+  filter:brightness(1.5);
+  padding-top:70px;
 }
 
 .flat-icons{
@@ -567,10 +568,13 @@ header {
     width: 33%;
   }
   img{
-    max-height:100px;
-    max-width:100px;
+    max-height:150px;
+    max-width:150px;
     display:block; 
     margin: 30px auto;
+    &:hover {
+      transform: translateX(20px);
+    }
   }
   p{
     display:block;
@@ -686,4 +690,9 @@ header {
 
 .edit-account{
     display:inline;
+}
+
+.homepage-logo {
+  width:400px;
+  height:400px;
 }
