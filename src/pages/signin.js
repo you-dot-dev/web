@@ -1,13 +1,14 @@
 import React, {useState, useContext} from 'react'
 import Layout from '../components/layout'
 import AuthContext from '../contexts/auth/AuthContext'
-import {navigate} from '@reach/router';
+import {navigate} from 'gatsby';
+import Spinner from '../components/spinner';
 
 const SignIn = (props) => {
 
   const authContext = useContext(AuthContext);
 
-  const { signInUser } = authContext;
+  const { signInUser, loading } = authContext;
 ;
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -31,6 +32,7 @@ const SignIn = (props) => {
      */
    }
 
+
   return (
     <Layout>
 <div className="container">
@@ -40,6 +42,7 @@ const SignIn = (props) => {
       <h1>login page</h1>
           <p>welcome back, ready to make some progress?</p>
   
+      { loading ? <Spinner/> : null}
       <div className="form-group">
           <label htmlFor="text"> email address</label>
         <input 
