@@ -1,0 +1,29 @@
+.signin-container {
+  max-width: 500px;
+  margin: 0 auto;
+  h1, p{
+    text-align: center;
+  }
+  input {
+    border-radius: 10px;
+    padding-left: 40px;
+    &:hover{
+      color:rgb(32,209,126);
+    }
+  }
+  .inputWithIcon {
+    position:relative
+  }
+  
+  i{
+    position: absolute;
+    left:0;
+    top:10px;
+    padding:2px 9px;
+    color:#aaa;
+    transition: .3s;
+  }
+  a{
+    color:#333;
+  }
+}

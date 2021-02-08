@@ -35,39 +35,44 @@ const SignIn = (props) => {
 
   return (
     <Layout>
-<div className="container">
-
-     <div className="form-wrap">
+  <div className="signin-container">
      
-      <h1>login page</h1>
-          <p>welcome back, ready to make some progress?</p>
+      <h1>welcome back</h1>
+          <p> ready to make some progress?</p>
   
       { loading ? <Spinner/> : null}
-      <div className="form-group">
-          <label htmlFor="text"> email address</label>
+      <div className='inputWithIcon'>
         <input 
           type="text"
           name="email"
+          placeholder="Enter Email Address"
           onChange={(e) => setEmail(e.target.value)}
-        /></div>
-      <div className="form-group">
-          <label htmlFor="text">password</label>
+        />
+        <i className="fa fa-user fa-lg fa-fw"></i>
+        </div>
+      
+      <div className="inputWithIcon">
+          
         <input
           type="password"
           name="password"
+          placeholder="Enter Password"
           onChange={(e) => setPassword(e.target.value)}
-        /></div>
+        />
+        <i className="fa fa-key"></i>
+        </div>
       
 
       <button
         className="btn"
         type="submit"
         onClick={(e) => {handleSubmit(e)}}>sign in</button>
+        <br/>
+
+        <a href="/">forgot your password?</a>
 
     </div>
-      
-    
-    </div>
+
     </Layout>
   )
 }

@@ -34,7 +34,7 @@ const Register = () => {
 
   return (
     <Layout>
-<div className="container">
+<div className="register-container">
 
      <div className="form-wrap">
      

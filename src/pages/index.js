@@ -7,7 +7,7 @@ import TypeWriterEffect from 'react-typewriter-effect';
 import youDevLogo from '../../assets/you-dev-logo-white.png'
 import youDevIcon1 from '../../assets/articles-icon.png'
 import youDevIcon2 from '../../assets/screencasts-icon.png'
-import Lightbulb from '../images/lightbulb.svg'
+import youDevIcon3 from '../../assets/skillmap.png'
 
 
 const IndexPage = () => (
@@ -62,7 +62,7 @@ const IndexPage = () => (
           </div>
         </div>
         <div>
-          <img src={Lightbulb} alt="lightbulb"/>
+          <img src={youDevIcon3} alt="lightbulb"/>
           <div className="homepage-paragraph">
             <p>Easily track your progress with a skill map. See everything you've learned so far and how the topics relate to each other.</p>
           </div>
