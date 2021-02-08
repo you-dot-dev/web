@@ -1,20 +1,29 @@
 .signin-container {
   max-width: 500px;
   margin: 0 auto;
+  h1{
+    font-size:3em;
+  }
   h1, p{
     text-align: center;
+    padding:5px;
   }
   input {
     border-radius: 10px;
     padding-left: 40px;
-    &:hover{
-      color:rgb(32,209,126);
+    &:focus {
+      outline-color: rgb(32,209,126);
     }
   }
   .inputWithIcon {
-    position:relative
+    position:relative;
+    &:focus-within {
+      i {
+        color:  rgb(32,209,126);
+      }
+    }
   }
-  
+
   i{
     position: absolute;
     left:0;
@@ -24,6 +33,25 @@
     transition: .3s;
   }
   a{
-    color:#333;
+    color:red;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .signin-btn {
+    display: inline-block;
+    min-width: 100%;
+    background: rgb(32,209,126);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: opacity 0.2s ease-in;
+    outline: none;
+    &:hover {
+      background: rgb(81, 224, 157);
+    }
   }
 }

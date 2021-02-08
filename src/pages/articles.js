@@ -17,6 +17,7 @@ const Articles = ({data}) => {
     let [articleImage] = data.allImageSharp.nodes.filter( (image) => {
       return article.frontmatter.image == image.fluid.originalName
     });
+    console.log("article image?", articleImage) 
 
     const displayDate = new Date(article.frontmatter.date).toDateString();
 

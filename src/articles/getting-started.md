@@ -2,6 +2,7 @@
 slug: "/articles/getting-started"
 date: "2021-02-01 10:00:00"
 title: "Getting started in software development"
+image: 'coding.jpg'
 author: "Paul Coe"
 ---
 

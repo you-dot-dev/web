@@ -1,7 +1,8 @@
 import React, {useState, useContext} from 'react'
 import Layout from '../components/layout'
 import AuthContext from '../contexts/auth/AuthContext'
-import {navigate} from 'gatsby';
+import {Link} from 'gatsby'
+import {navigate} from 'gatsby'
 import Spinner from '../components/spinner';
 
 const SignIn = (props) => {
@@ -64,14 +65,12 @@ const SignIn = (props) => {
       
 
       <button
-        className="btn"
+        className="signin-btn"
         type="submit"
         onClick={(e) => {handleSubmit(e)}}>sign in</button>
         <br/>
-
-        <a href="/">forgot your password?</a>
-
     </div>
+
 
     </Layout>
   )
