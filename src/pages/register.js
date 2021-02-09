@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react'
 import axios from 'axios'
 import Layout from '../components/layout'
 import AuthContext from '../contexts/auth/AuthContext'
+import youDevLogo from '../../assets/you-dev-logo.png'
 
 const Register = () => {
 
@@ -36,47 +37,51 @@ const Register = () => {
     <Layout>
 <div className="register-container">
 
-     <div className="form-wrap">
+  <div className="register">
      
-      <h1>welcome to you.dev</h1>
+      <img src={youDevLogo} alt="logo"/>
           <p>it's free and only takes a minute</p>
+          <h2 class="divider line one-line" contenteditable>&lt; / &gt;</h2>
   
-      <div className="form-group">
-          <label htmlFor="text">username</label>
+      <div className="inputWithIcon">
         <input 
             type="text"
             name="userName"
+            placeholder="Enter valid username"
             onChange={(e) => setUserName(e.target.value)}
-          /></div>
-      <div className="form-group">
-          <label htmlFor="text"> email address</label>
+          />
+          <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+      <div className="inputWithIcon">
         <input 
           type="text"
           name="email"
+          placeholder="Enter valid email address"
           onChange={(e) => setEmail(e.target.value)}
-        /></div>
-      <div className="form-group">
-          <label htmlFor="text">enter password</label>
+        />
+        <i className="fa fa-envelope" aria-hidden="true"></i>
+        </div>
+      <div className="inputWithIcon">
         <input
           type="password"
           name="password"
+          placeholder="Enter password"
           onChange={(e) => setPassword(e.target.value)}
-        /></div>
+        />
+        <i className="fa fa-key" aria-hidden="true"></i>
+        </div>
       
 
       <button
-        className="btn"
+        className="signin-btn"
         type="submit"
         onClick={(e) => {handleSubmit(e)}}>sign up </button>
 
        <p> By clicking the Sign Up button, you agree to our Terms and Conditions and Privacy Policy</p>
     </div>
-      
-      <div className="about">
-        <h1>About youdev</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non iusto suscipit reprehenderit! Quasi incidunt, accusamus doloribus aliquam laborum repudiandae doloremque earum nemo pariatur adipisci eos laboriosam animi aliquid modi libero harum illum ipsum maiores ipsam necessitatibus at quas. Placeat, magnam! Deserunt repudiandae suscipit ad veritatis neque debitis, architecto harum itaque, sunt nemo commodi cum vel! Necessitatibus quos iure cupiditate reprehenderit voluptas praesentium repudiandae velit, inventore nesciunt porro accusamus omnis hic consequatur, sunt vitae doloribus autem, labore nam aspernatur! Reiciendis deleniti corporis numquam repudiandae nobis recusandae perspiciatis voluptatibus nisi! Maxime iste eum at hic eius necessitatibus dicta inventore laboriosam tenetur sapiente.</p>
+
+
       </div>
-    </div>
     </Layout>
   )
 }
