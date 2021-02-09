@@ -16,7 +16,7 @@
 
 body {
   line-height: 1.6;
-  background-color: #fff;
+  background-color: #EAEAEC;
   color: #333;
 }
 
@@ -502,9 +502,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  max-width: 1280px;
+  max-width: 1300px;
   margin: 0 auto;
-  background: #fff;
  
   
 
@@ -517,6 +516,12 @@ header {
     width: 25%;
     padding: 15px;
     box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #333;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 
 
     p, h1 {
@@ -573,15 +578,22 @@ header {
     max-width:150px;
     display:block; 
     margin: 30px auto;
-    &:hover {
-      transform: translateX(20px);
-    }
   }
   p{
     display:block;
     font-size: 20px;
     font-family: sans-serif;
     color: #555;
+  }
+  .border{
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 10px;
+    &:hover {
+      transform: translateX(5px);
+    }
   }
 }
 
@@ -648,33 +660,6 @@ header {
 	color: #009B68;
 }
 
-//register page
-
-.about {
-  max-width: 20%;
-}
-
-.register-container {
-  display:flex;
-  justify-content: space-around;
-}
-.form-wrap {
-  background:#fff;
-  padding:15px;
-  color:#333;
-
-  .form-group {
-    label {
-      display: inline;
-      color:#333;
-    }
-    input{
-      padding:10px;
-      border:#ddd 1px solid;
-      border-radius:5px;
-    }
-  }
-}
 
 //account css
 
