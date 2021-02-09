@@ -49,25 +49,34 @@ const IndexPage = () => (
     <h2 class="divider line one-line" contenteditable>&lt; / &gt;</h2>
 
     <section className="flat-icons">
-        <div>
+        <div className="border">
           <img src={youDevIcon1} alt="lightbulb"/>
           <div className="homepage-paragraph">
             <p>Loads of free articles for engineers of all levels. From cheat-sheets to walk-throughs, grab quick reference for the  issue at hand. </p>
           </div>
         </div>
-        <div>
+        <div className="border">
           <img src={youDevIcon2} alt="lightbulb"/>
           <div className="homepage-paragraph">
             <p>Hours of high-quality screen casts. Topics covered: softare developement, software architecture, how to read documentation, infrastructure, security, error-handling/ debugging. </p>
           </div>
         </div>
-        <div>
+        <div className="border">
           <img src={youDevIcon3} alt="lightbulb"/>
           <div className="homepage-paragraph">
             <p>Easily track your progress with a skill map. See everything you've learned so far and how the topics relate to each other.</p>
           </div>
         </div>
+
        </section>
+        <div className="coming-soon">
+          <h1>meet the team!</h1>
+          <h2>hello im paul</h2>
+          <p>im the instructor</p>
+          <h2>hello im angelika</h2>
+          <p>im the web developer behind this site</p>
+
+        </div>
   </Layout>
 )
 
