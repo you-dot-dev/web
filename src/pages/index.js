@@ -8,6 +8,8 @@ import youDevLogo from '../../assets/you-dev-logo-white.png'
 import youDevIcon1 from '../../assets/articles-icon.png'
 import youDevIcon2 from '../../assets/screencasts-icon.png'
 import youDevIcon3 from '../../assets/skillmap.png'
+import Angelika from '../images/angelika.jpeg'
+import Paul from '../images/paul.jpg'
 
 
 const IndexPage = () => (
@@ -69,12 +71,23 @@ const IndexPage = () => (
         </div>
 
        </section>
-        <div className="coming-soon">
+        <div className="team">
           <h1>meet the team!</h1>
+          <p>two hardworking engineers hoping to change the learning process around software development</p>
+          <div className="team-builder">
+
+          <div className="paul">
           <h2>hello im paul</h2>
-          <p>im the instructor</p>
+          <img src={Paul} alt="paul"/>
+          <h4>im the instructor</h4>
+          
+          </div>
+          <div className="angelika">
           <h2>hello im angelika</h2>
-          <p>im the web developer behind this site</p>
+            <img src={Angelika} alt="angelika"/>
+          <h4>im the web developer behind this site</h4>
+          </div>
+          </div>
 
         </div>
   </Layout>
