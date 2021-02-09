@@ -1,10 +1,17 @@
 import { Link } from "gatsby"
+import {useContext} from 'react'
 import PropTypes from "prop-types"
 import React from "react"
 import userPNG from '../images/user.svg'
+import AuthContext from '../contexts/auth/AuthContext';
 
+const Header = ({ siteTitle }) => {
 
-const Header = ({ siteTitle }) => (
+  const authContext = useContext(AuthContext);
+
+  const { user } = authContext;
+
+  return(
   <header>
     <nav>
       <ul className="header-links">
@@ -22,7 +29,9 @@ const Header = ({ siteTitle }) => (
               fontFamily: "'Shadows Into Light', cursive",
               fontSize:'18px'
             }}
-          > me@angelika.dev</h4>
+          > 
+          {user ? <h4>{user.email}</h4> : null}
+          </h4>
         </li>
         <li className="dropdown-menu">
           <Link to="/account">
@@ -37,8 +46,8 @@ const Header = ({ siteTitle }) => (
       </ul>  
     </nav>
   </header>
-)
-
+  )
+}
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
