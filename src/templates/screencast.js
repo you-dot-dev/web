@@ -17,7 +17,7 @@ const Template = ({data}) => {
           <h1>{frontmatter.title}</h1>
           <h2>{displayDate}</h2>
           <h3>{frontmatter.author}</h3>
-          <iframe width="560" height="315" src={frontmatter.video_url} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe title={frontmatter.title} width="560" height="315" src={frontmatter.video_url} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
