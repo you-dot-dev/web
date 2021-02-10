@@ -8,7 +8,7 @@ const Account = () => {
       <div className="account-info">
       <h1>username</h1>
       <h1>email</h1>
-      <img src="" alt="profile-picture"/>
+      <img src="" alt="profile"/>
       <p>Date joined:</p>
       </div>
       <div className="edit-account">
