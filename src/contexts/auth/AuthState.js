@@ -65,6 +65,7 @@ const AuthState = (props) => {
   }
 
   const signInUser = async (formData) => {
+    
     dispatch({
       type:SIGNIN_USER
     });
@@ -87,7 +88,11 @@ const AuthState = (props) => {
       })
     }
   }
- 
+
+  const logoutUser = async () => {
+    dispatch({type: LOGOUT_USER});
+  }
+
   return (
     <AuthContext.Provider 
       value={{
@@ -96,6 +101,7 @@ const AuthState = (props) => {
         loading: state.loading,
         registerUser,
         signInUser,
+        logoutUser,
         getProfilePicture
       }}>
         {props.children}
