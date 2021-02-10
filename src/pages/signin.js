@@ -1,8 +1,7 @@
 import React, {useState, useContext} from 'react'
 import Layout from '../components/layout'
 import AuthContext from '../contexts/auth/AuthContext'
-import {Link} from 'gatsby'
-import {navigate} from 'gatsby'
+import { navigate } from 'gatsby'
 import Spinner from '../components/spinner';
 
 const SignIn = (props) => {
