@@ -10,6 +10,7 @@ const Header = ({ siteTitle }) => {
   const authContext = useContext(AuthContext);
 
   const { user } = authContext;
+  console.log('user', user)
 
   return(
   <header>
