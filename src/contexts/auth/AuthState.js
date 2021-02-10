@@ -65,17 +65,19 @@ const AuthState = (props) => {
   }
 
   const signInUser = async (formData) => {
-    
+    console.log('signinUser?: formData', formData);
     dispatch({
       type:SIGNIN_USER
     });
 
     try {
+      console.log("Is this thing on?");
       let user = await axios.post('http://localhost:7890/auth/signin',
         formData, { headers: {'Content-Type' : 'application/json'}}
       )
-      console.log('user.data.data:', user.data.data);
-      getProfilePicture(user.data.data.email)
+      console.log("Is this thing on again?");
+
+      //getProfilePicture(user.data.data.email)
 
       dispatch({
         type:SIGNIN_USER_SUCCESS,
