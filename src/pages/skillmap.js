@@ -21,7 +21,7 @@ const skillMap = () => {
         </Marker>
         <Marker position={[0.0, 0.01]}>
           <Popup>
-            <iframe width={"560"} height={"315"} src={"https://www.youtube.com/embed/Pr_-AudwsNU"} frameborder={"0"} allow={"autoplay; clipboard-write; encrypted-media; picture-in-picture"} allowfullscreen={true}></iframe>
+            <iframe title="HTML" width={"560"} height={"315"} src={"https://www.youtube.com/embed/Pr_-AudwsNU"} frameborder={"0"} allow={"autoplay; clipboard-write; encrypted-media; picture-in-picture"} allowfullscreen={true}></iframe>
           </Popup>
         </Marker>
       </MapContainer>
