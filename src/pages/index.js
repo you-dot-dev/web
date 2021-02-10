@@ -13,7 +13,7 @@ import Paul from '../images/paul.jpg'
 
 
 const IndexPage = () => (
-  
+
   <Layout>
     <SEO title="Home" />
     <div className="parallax">
@@ -48,7 +48,7 @@ const IndexPage = () => (
     <h2>ready to get started?</h2>
     <p style={{color:'rgb(32,209,126)'}}>Fun and fast full-stack training for engineers of all levels.</p>
     </div>
-    <h2 class="divider line one-line" contenteditable>&lt; / &gt;</h2>
+    <h2 className="divider line one-line">&lt; / &gt;</h2>
 
     <section className="flat-icons">
         <div className="border">
