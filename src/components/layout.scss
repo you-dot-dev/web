@@ -407,7 +407,7 @@ table th {
 /* MY STUFF */
 header {
   max-height: 60px;
-  background: rgb(32,209,126);
+  background: rgb(40,40,40);
 
   nav {
     display: flex;
@@ -431,10 +431,14 @@ header {
     ul.account-menu {
       display: flex;
       align-items: center;
-      li{
-        a{
+      li {
+        a {
           line-height: 1;
           display: block;
+          padding: 10px;
+          margin-right: 10px;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
         }
       }
     }
@@ -609,10 +613,23 @@ header {
   display: block;
   position: relative;
   margin-right:0px;
+  svg {
+    width: 30px;
+    height: 30px;
+    path {
+      fill: #fff;
+    }
+  }
 
   :hover {
+    svg {
+      path {
+        fill: #333;
+      }
+    }
     .dropdown-content {
       display:block;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
     }
     background-color: rgb(32,209,126);
   }
@@ -620,8 +637,11 @@ header {
   .dropdown-content {
     display: none;
     position: absolute;
-    top: 40px; right: 0;
-    padding-top: 20px;
+    top: 50px; right: 10px;
+    padding: 20px 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: rgb(32,209,126);
     min-width: 160px;
     z-index: 1;
