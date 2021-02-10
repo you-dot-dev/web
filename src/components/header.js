@@ -3,6 +3,7 @@ import {useContext} from 'react'
 import PropTypes from "prop-types"
 import React from "react"
 import AuthContext from '../contexts/auth/AuthContext';
+import youDevLogo from "../images/you-dev-header-logo.png";
 
 const Header = ({ siteTitle }) => {
 
@@ -15,7 +16,7 @@ const Header = ({ siteTitle }) => {
   <header>
     <nav>
       <ul className="header-links">
-        <li><Link to="/">{siteTitle}</Link></li>
+        <li><Link to="/"><img src={youDevLogo} /></Link></li>
         <li><Link to="/articles">Articles</Link></li>
         <li><Link to="/screencasts">Screen Casts</Link></li>
         <li><Link to="/skillmap">Skill Map</Link></li>
