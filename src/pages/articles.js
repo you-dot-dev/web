@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,7 +15,7 @@ const Articles = ({data}) => {
   .map( (article) => {
 
     let [articleImage] = data.allImageSharp.nodes.filter( (image) => {
-      return article.frontmatter.image == image.fluid.originalName
+      return article.frontmatter.image === image.fluid.originalName
     });
     console.log("article image?", articleImage) 
 
