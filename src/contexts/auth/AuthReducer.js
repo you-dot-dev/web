@@ -31,6 +31,12 @@ export default (state, action) => {
         isAuthenticated:true,
         user: action.payload
       }
+    case SIGNIN_USER_FAIL:
+      return{
+        ...state,
+        isAuthenticated: false,
+        user: {}
+      }
     default:
       return state
   }
