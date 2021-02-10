@@ -501,19 +501,19 @@ header {
 .article-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  // justify-content: space-around;
   max-width: 1300px;
   margin: 0 auto;
  
   
 
-  &:after {
-    content: '';
-    flex: auto;
-  }
+  // &:after {
+  //   content: '';
+  //   flex: auto;
+  // }
 
   .article-link {
-    width: 25%;
+    width: 24%;
     padding: 15px;
     box-sizing: border-box;
     background-color: #fff;
