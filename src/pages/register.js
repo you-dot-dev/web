@@ -1,5 +1,4 @@
 import React, {useState, useContext} from 'react'
-import axios from 'axios'
 import Layout from '../components/layout'
 import AuthContext from '../contexts/auth/AuthContext'
 import youDevLogo from '../../assets/you-dev-logo.png'
