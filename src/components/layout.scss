@@ -418,15 +418,18 @@ header {
       padding:0;
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: top;
+      img {
+        width: 110px;
+        height: 45px;
+      }
       li {
         align-items: center;
         padding:5px 10px;
+        font-size: 24px;
+        font-family: sans-serif;
       }
 
-      :first-child {
-        font-size: 100%;
-      }
     }
     ul.account-menu {
       display: flex;
