@@ -31,7 +31,7 @@ const AuthState = (props) => {
     dispatch({
       type: REGISTER_USER
     });
-    
+
     try {
       let user = await axios.post( "http://localhost:7890/auth/register",
         formData, { headers: {'Content-Type' : 'application/json'} }
@@ -65,30 +65,28 @@ const AuthState = (props) => {
   }
 
   const signInUser = async (formData) => {
-    console.log('signinUser?: formData', formData);
+
     dispatch({
       type:SIGNIN_USER
     });
 
     try {
-      console.log("Is this thing on?");
       let user = await axios.post('http://localhost:7890/auth/signin',
         formData, { headers: {'Content-Type' : 'application/json'}}
       )
-      console.log("Is this thing on again?");
-
-      //getProfilePicture(user.data.data.email)
 
       dispatch({
         type:SIGNIN_USER_SUCCESS,
-        payload:user.data.data
+        payload: user.data.user
       })
+
     } catch (error) {
       dispatch({
         type:SIGNIN_USER_FAIL,
         payload:error
       })
     }
+
   }
 
   const logoutUser = async () => {
