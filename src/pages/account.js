@@ -1,24 +1,58 @@
-import React from 'react'
-import Layout from '../components/layout';
+import React, {useContext} from 'react'
+import {Link} from 'gatsby'
+import youDevLogo from '../../assets/you-dev-logo-white.png';
+import AuthContext from '../contexts/auth/AuthContext';
 
 const Account = () => {
+
+  const authContext = useContext(AuthContext);
+
+  const { user } = authContext;
+
+
   return (
-    <Layout>
     <div className="account">
-      <div className="account-info">
-      <h1>username</h1>
-      <h1>email</h1>
-      <img src="" alt="profile"/>
-      <p>Date joined:</p>
+      <div className="dashboard brder">
+        <h1>{user.username}</h1>
+        <hr/>
+        <div className="icons">
+        <i className="fa fa-user fa-lg fa-fw"></i>
+        <Link>Dashboard</Link>
+        </div>
+        <hr/>
+        <div className="icons">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+        <h3>Account Information</h3>
+        </div>
+        <hr/>
+        <div className="icons">
+        <i class="fa fa-recycle" aria-hidden="true"></i>
+        <h3> Manage Subscription</h3>
+        </div>
+        <hr/>
+        <div className="icons">
+        <i class="fa fa-credit-card" aria-hidden="true"></i> 
+        <h3>Payment Information</h3>
+        </div>
+        <hr/>
+        <div className="icons">
+        <i class="fa fa-question-circle" aria-hidden="true"></i>
+        <h3>FAQ's</h3>
+        </div>
+        <hr/>
       </div>
-      <div className="edit-account">
-        <button>Change Username</button>
-        <button>Change Password</button>
-        <button>View Progress</button>
-        <button>Cancel subscription</button>
+      <div className="dashboard-edit brder">
+        <img src={youDevLogo} alt="logo"/>
+          <div className="welcome">
+        <h1>Welcome back, {user.username}</h1>
+        <h3>From your My Account Dashboard, you have the ability to edit your profile, change your subscription, and view frequently asked questions.</h3>
+        <h4>Need extra help? <a href="mailto:paul@you.dev">Contact us here. We will get back to you as soon as we can.</a></h4>
+        
+          </div>
+
       </div>
+
     </div>
-    </Layout>
   )
 }
 

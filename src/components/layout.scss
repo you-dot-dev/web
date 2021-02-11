@@ -21,7 +21,6 @@ body {
 }
 
 a {
-  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -418,18 +417,26 @@ header {
       padding:0;
       display: flex;
       justify-content: space-between;
-      align-items: top;
-      img {
-        width: 110px;
-        height: 45px;
-      }
+      align-items: start;
       li {
         align-items: center;
-        padding:5px 10px;
+        padding:10px 10px 5px;
         font-size: 24px;
-        font-family: sans-serif;
+        font-family: 'Nunito';
+        
       }
-
+      img{
+        position: relative;
+        width: 110px;
+        height: 45px;
+        top: 10px;
+      }
+      
+      :first-child {
+        font-size: 100%;
+        padding-top: 0;
+        color: #fff;
+      }
     }
     ul.account-menu {
       display: flex;
@@ -569,6 +576,7 @@ header {
 
 .typewriter-header{
   font-size:40px;
+  font-family: 'Nunito';
   color: rgb(32,209,126);
   filter:brightness(1.5);
   padding-top:70px;
@@ -589,7 +597,7 @@ header {
   p{
     display:block;
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: "Nunito";
     color: #555;
   }
   .border{
@@ -641,6 +649,7 @@ header {
     display: none;
     position: absolute;
     top: 50px; right: 10px;
+    font-family:"Nunito";
     padding: 20px 0;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -684,26 +693,10 @@ header {
 }
 
 
-//account css
-
-.account{
-  display: flex;
-  justify-content: center;
-}
-
-.account-info{
-  margin:20px;
-}
-
-.edit-account{
-    display:inline;
-}
-
 .homepage-logo {
   width:400px;
   height:400px;
 }
-
 
 .team {
   margin: 1em auto;

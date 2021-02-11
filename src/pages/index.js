@@ -24,6 +24,7 @@ const IndexPage = () => (
         className="typewriter"
         textStyle={{
           color: '#fff',
+          fontFamily: 'Nunito',
           fontWeight: 1000,
           fontSize: '5em',
         }}
@@ -60,7 +61,7 @@ const IndexPage = () => (
         <div className="border">
           <img src={youDevIcon2} alt="lightbulb"/>
           <div className="homepage-paragraph">
-            <p>Hours of high-quality screen casts. Topics covered: softare developement, software architecture, how to read documentation, infrastructure, security, error-handling/ debugging. </p>
+            <p>Hours of high-quality screen casts. Topics covered: softare development, software architecture, how to read documentation, infrastructure, security, error-handling/ debugging. </p>
           </div>
         </div>
         <div className="border">

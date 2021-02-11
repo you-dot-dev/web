@@ -1,12 +1,43 @@
-.account{
+.account {
   display: flex;
-  justify-content: center;
 }
 
-.account-info{
-  margin:20px;
+.icons {
+  display: flex;
+  padding:5px;
+}
+.dashboard {
+  margin: 15px 20px;
+  height: 95vh;
+  width: 30vw;
+  background-color: #fff;
+  font-family:"Nunito"
 }
 
-.edit-account{
-    display:inline;
+.dashboard-edit {
+  margin: 15px 50px;
+  height: 95vh;
+  width: 65vw;
+  padding:50px;
+  background-color: rgb(32,209,126);
+  font-family:"Nunito";
+  img {
+    height:200px;
+    width: 200px;
+    float:right;
+    margin-left:10px;
+  }
+  .welcome {
+    padding:100px 0px;
+  }
+  a {
+    color: #fff;
+  }
+  
+}
+
+.brder {
+  border: 1px solid rgb(176, 174, 174);
+  box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.5);
+  border-radius: 2px;
 }

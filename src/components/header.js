@@ -17,9 +17,9 @@ const Header = ({ siteTitle }) => {
     <nav>
       <ul className="header-links">
         <li><Link to="/"><img src={youDevLogo} /></Link></li>
-        <li><Link to="/articles">Articles</Link></li>
-        <li><Link to="/screencasts">Screen Casts</Link></li>
-        <li><Link to="/skillmap">Skill Map</Link></li>
+        <li><Link to="/articles">articles</Link></li>
+        <li><Link to="/screencasts">screen casts</Link></li>
+        <li><Link to="/skillmap">skill map</Link></li>
       </ul>
       <ul className="account-menu">
         <li>
@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
             style= {{
               padding:'15px',
               color:'#fff',
-              fontFamily: "'Shadows Into Light', cursive",
+              fontFamily: "Nunito",
               fontSize:'18px'
             }}
           > 
