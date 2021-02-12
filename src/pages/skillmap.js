@@ -4,13 +4,15 @@ import Layout from '../components/layout';
 import Freeland from "../images/freeland.svg";
 import TheSea from "../images/the-sea.svg";
 import Words from "../images/words.svg";
-import { MapContainer, ImageOverlay, Marker, Popup } from 'react-leaflet'
+import { MapContainer, ImageOverlay, Marker, Popup } from 'react-leaflet';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const skillMap = () => {
   const defaultBounds = [[-1,-1], [1,1]];
 
   return (
     <Layout>
+      <PageTransition>
       <MapContainer id={"skill-map"}
         center={[0,0]}
         minZoom={10} zoom={13} maxZoom={14}
@@ -33,6 +35,7 @@ const skillMap = () => {
           </Popup>
         </Marker>
       </MapContainer>
+      </PageTransition>
     </Layout>
   )
 }

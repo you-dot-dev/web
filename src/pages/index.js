@@ -9,12 +9,14 @@ import youDevIcon1 from '../../assets/articles-icon.png'
 import youDevIcon2 from '../../assets/screencasts-icon.png'
 import youDevIcon3 from '../../assets/skillmap.png'
 import Angelika from '../images/angelika.jpeg'
-import Paul from '../images/paul.jpg'
+import Paul from '../images/paul.jpg';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 
 const IndexPage = () => (
 
   <Layout>
+    <PageTransition>
     <SEO title="Home" />
     <div className="parallax">
       <div className="home-page-header">
@@ -91,6 +93,7 @@ const IndexPage = () => (
           </div>
 
         </div>
+        </PageTransition>
   </Layout>
 )
 

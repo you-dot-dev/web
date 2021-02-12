@@ -2,7 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/seo";
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const Screencasts = ({data}) => {
 
@@ -34,7 +35,8 @@ const Screencasts = ({data}) => {
   });
 
   return (
-  <Layout>
+    <Layout>
+    <PageTransition>
     <SEO title="Page two" />
     <div className="article-header">
       <h1>Available Screencasts</h1>
@@ -44,6 +46,7 @@ const Screencasts = ({data}) => {
     <div className="article-list">
       {listOfScreencasts}
     </div>
+  </PageTransition>
   </Layout>
   )
 }
