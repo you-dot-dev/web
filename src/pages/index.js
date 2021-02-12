@@ -75,24 +75,34 @@ const IndexPage = () => (
 
        </section>
         <div className="team">
-          <h1>meet the team!</h1>
+          <h1 data-sal="slide-up"  data-sal-delay="300">meet the team!</h1>
           <p>two hardworking engineers hoping to change the learning process around software development</p>
-          <div className="team-builder">
+          
+          <h2 className="divider line one-line">&lt; / &gt;</h2>
+
 
           <div className="paul">
+            <div className="team-image">
           <h2>hello im paul</h2>
           <img src={Paul} alt="paul"/>
-          <h4>im the instructor</h4>
-          
           </div>
-          <div className="angelika">
-          <h2>hello im angelika</h2>
-            <img src={Angelika} alt="angelika"/>
-          <h4>im the web developer behind this site</h4>
+          <div className="description">
+          <p>Paul has been deeply involved in computing for almost 30 years, from learning computer science fundamentals from Steve Wozniak in 1993, to working as a software engineer at a Fortune 500 company today. He enjoys problem solving, coffee, and the great outdoors. Paul also taught computer science and mathematics for 10 years to hundreds of students in Los Gatos, CA.</p>
           </div>
           </div>
 
-        </div>
+          <div className="paul">
+            <div className="description">
+          <p>im the web developer behind this site</p>
+          </div>
+            <div className="team-image">
+          <h2>hello im angelika</h2>
+            <img src={Angelika} alt="angelika"/></div>
+          </div>
+          </div>
+          <h2 className="divider line one-line">&lt; / &gt;</h2>
+
+          <h1>What you get when you sign up!</h1>
         </PageTransition>
   </Layout>
 )
