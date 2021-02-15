@@ -1,0 +1,8 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+  <filter id="filter">
+    <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+    <feDisplacementMap in="SourceGraphic" scale="160" />
+  </filter>
+  <ellipse cx="100" cy="50" rx="100" ry="50" filter="url(#filter)"/>
+</svg>
+
