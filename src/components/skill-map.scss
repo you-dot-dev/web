@@ -1,1 +1,5 @@
-#skill-map { height: 500px; margin:20px auto; }
+#skill-map { height: 500px; margin: 0 auto; }
+
+.leaflet-image-layer {
+  transition: opacity 2s;
+}
