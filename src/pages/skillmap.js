@@ -6,18 +6,21 @@ import ZoneText from "../images/zone-text-01.svg";
 import Terrain from "../images/terrain-01.svg";
 import Freeland from "../images/freeland-01.svg";
 import TheSea from "../images/the-sea.svg";
-//import Words from "../images/words.svg";
+import SignText from "../images/sign-text-01.svg";
+import Signs from "../images/signs-01.svg";
 import CloudLayer from "../images/cloud-layer-01.svg";
 import PageTransition from 'gatsby-plugin-page-transitions';
 import { MapContainer, ImageOverlay, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 
 const DEFAULT_BOUNDS = [[-1,-1], [1,1]];
 
+
 const ZoneOverlay = (props) => {
 
   const map = useMap();
   const [zoomLevel, setZoomLevel] = useState(13);
   const [zoneOpacity, setZoneOpacity] = useState(0.5);
+  const [SignsOpacity, setSignsOpacity] = useState(1);
 
   const mapEvents = useMapEvents({
     zoomend: (event) => {
@@ -25,15 +28,19 @@ const ZoneOverlay = (props) => {
       switch(event.target._zoom) {
         case 11:
           setZoneOpacity(1);
+          setSignsOpacity(0);
           break;
         case 12:
           setZoneOpacity(0.5);
+          setSignsOpacity(0.25);
           break;
         case 13:
           setZoneOpacity(0);
+          setSignsOpacity(1);
           break;
         default:
           setZoneOpacity(0);
+          setSignsOpacity(1);
       }
       console.log('event.target._zoom?:', event.target._zoom );
     }
@@ -44,8 +51,10 @@ const ZoneOverlay = (props) => {
 
   return (
     <Fragment>
-      <ImageOverlay url={ZoneText}   zIndex={6} bounds={DEFAULT_BOUNDS} opacity={zoneOpacity} />
-      <ImageOverlay url={Zones}      zIndex={5} bounds={DEFAULT_BOUNDS} opacity={zoneOpacity} />
+      <ImageOverlay url={ZoneText}   zIndex={5} bounds={DEFAULT_BOUNDS} opacity={zoneOpacity} />
+      <ImageOverlay url={Zones}      zIndex={4} bounds={DEFAULT_BOUNDS} opacity={zoneOpacity} />
+      <ImageOverlay url={SignText}   zIndex={3} bounds={DEFAULT_BOUNDS} opacity={SignsOpacity} />
+      <ImageOverlay url={Signs}   zIndex={2} bounds={DEFAULT_BOUNDS} opacity={SignsOpacity} />
     </Fragment>
   );
 }
