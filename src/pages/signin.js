@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import AuthContext from '../contexts/auth/AuthContext'
 import { navigate } from 'gatsby'
 import Spinner from '../components/spinner';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const SignIn = (props) => {
 
@@ -35,6 +36,7 @@ const SignIn = (props) => {
 
   return (
     <Layout>
+      <PageTransition>
   <div className="signin-container">
      
       <h1>welcome back</h1>
@@ -70,7 +72,7 @@ const SignIn = (props) => {
         <br/>
     </div>
 
-
+    </PageTransition>
     </Layout>
   )
 }
