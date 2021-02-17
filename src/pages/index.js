@@ -10,7 +10,9 @@ import youDevIcon2 from '../../assets/screencasts-icon.png'
 import youDevIcon3 from '../../assets/skillmap.png'
 import Angelika from '../images/angelika.jpeg'
 import Paul from '../images/paul.jpg';
+import Map from "../components/Map";
 import PageTransition from 'gatsby-plugin-page-transitions';
+
 
 
 const IndexPage = () => (
@@ -74,35 +76,27 @@ const IndexPage = () => (
         </div>
 
        </section>
+        <div className="coming-soon">
+          <h1 data-sal="slide-up"  data-sal-delay="200">meet our team!</h1>
+          <p style={{color:'rgb(32,209,126)'}}>two hardworking engineers hoping to change the learning process around software development</p>
+          </div>
+          <h2 className="divider line one-line">&lt; / &gt;</h2>
+
         <div className="team">
-          <h1 data-sal="slide-up"  data-sal-delay="300">meet the team!</h1>
-          <p>two hardworking engineers hoping to change the learning process around software development</p>
+          <div className="paul">
+            <img className="img-1"src={Paul} alt="paul"/>
+          <p>Paul has been deeply involved in computing for almost 30 years, from learning computer science fundamentals from Steve Wozniak in 1993, to working as a software engineer at a Fortune 500 company today. He enjoys problem solving, coffee, and the great outdoors. Paul also taught computer science and mathematics for 10 years to hundreds of students in Los Gatos, CA.</p>
+          </div>
+          <div className="paul">
+          <p>Angelika is a skilled full stack software engineer residing in Silicon Valley, CA. Her passion for innovation and problem solving has blossomed into designing and deploying websites all over the US. Having gone through a bootcamp herself, Angelika understands the frustrations in learning software development and the confusion behind how everything gets tied together. She is on a mission to help others understand development on a deeper level.</p>
+            <img className="img-2"src={Angelika} alt="angelika"/>
+          </div>
+        </div>
           
           <h2 className="divider line one-line">&lt; / &gt;</h2>
 
-
-          <div className="paul">
-            <div className="team-image">
-          <h2>hello im paul</h2>
-          <img src={Paul} alt="paul"/>
-          </div>
-          <div className="description">
-          <p>Paul has been deeply involved in computing for almost 30 years, from learning computer science fundamentals from Steve Wozniak in 1993, to working as a software engineer at a Fortune 500 company today. He enjoys problem solving, coffee, and the great outdoors. Paul also taught computer science and mathematics for 10 years to hundreds of students in Los Gatos, CA.</p>
-          </div>
-          </div>
-
-          <div className="paul">
-            <div className="description">
-          <p>im the web developer behind this site</p>
-          </div>
-            <div className="team-image">
-          <h2>hello im angelika</h2>
-            <img src={Angelika} alt="angelika"/></div>
-          </div>
-          </div>
-          <h2 className="divider line one-line">&lt; / &gt;</h2>
-
           <h1>What you get when you sign up!</h1>
+          <Map/>
         </PageTransition>
   </Layout>
 )
