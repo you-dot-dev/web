@@ -3,18 +3,15 @@ import '../components/skill-map.scss';
 import Layout from '../components/layout';
 import Zones from "../images/zones-01.svg";
 import ZoneText from "../images/zone-text-01.svg";
-import Terrain from "../images/terrain-01.svg";
-import Freeland from "../images/freeland-01.svg";
-import TheSea from "../images/the-sea.svg";
 import SignText from "../images/sign-text-01.svg";
 import Signs from "../images/signs-01.svg";
-import CloudLayer from "../images/cloud-layer-01.svg";
 import PageTransition from 'gatsby-plugin-page-transitions';
+import Map from "../components/Map";
 import { MapContainer, ImageOverlay, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 
 const DEFAULT_BOUNDS = [[-1,-1], [1,1]];
 
-
+/*
 const ZoneOverlay = (props) => {
 
   const map = useMap();
@@ -57,7 +54,7 @@ const ZoneOverlay = (props) => {
       <ImageOverlay url={Signs}   zIndex={2} bounds={DEFAULT_BOUNDS} opacity={SignsOpacity} />
     </Fragment>
   );
-}
+} */
 
 
 const SkillMap = () => {
@@ -65,17 +62,7 @@ const SkillMap = () => {
   return (
     <Layout>
       <PageTransition>
-        <MapContainer id={"skill-map"}
-          center={[0.04, -0.02]}
-          minZoom={11} zoom={12} maxZoom={14}
-          scrollWheelZoom={false}
-          maxBounds={[[-0.5, -0.5],[0.75, 0.5]]}
-          maxBoundsViscosity={1.0}
-        >
-          <ZoneOverlay />
-          <ImageOverlay url={CloudLayer} zIndex={10} bounds={DEFAULT_BOUNDS} />
-          <ImageOverlay url={Freeland}   zIndex={1}  bounds={DEFAULT_BOUNDS} />
-          <ImageOverlay url={TheSea}     zIndex={0}  bounds={DEFAULT_BOUNDS} />
+        <Map>
           <Marker position={[0.04, -0.02]}>
             <Popup>
               Getting Started
@@ -86,7 +73,7 @@ const SkillMap = () => {
               <iframe title="HTML" width={"560"} height={"315"} src={"https://www.youtube.com/embed/Pr_-AudwsNU"} frameborder={"0"} allow={"autoplay; clipboard-write; encrypted-media; picture-in-picture"} allowfullscreen={true}></iframe>
             </Popup>
           </Marker>
-        </MapContainer>
+        </Map>
       </PageTransition>
     </Layout>
   )
