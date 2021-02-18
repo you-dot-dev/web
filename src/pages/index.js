@@ -10,8 +10,8 @@ import youDevIcon2 from '../../assets/screencasts-icon.png'
 import youDevIcon3 from '../../assets/skillmap.png'
 import Angelika from '../images/angelika.jpeg'
 import Paul from '../images/paul.jpg';
-import Map from "../components/Map";
 import PageTransition from 'gatsby-plugin-page-transitions';
+import Map from '../images/map-topics-homepage.jpg'
 
 
 
@@ -92,11 +92,9 @@ const IndexPage = () => (
             <img className="img-2"src={Angelika} alt="angelika"/>
           </div>
         </div>
-          
-          <h2 className="divider line one-line">&lt; / &gt;</h2>
 
           <h1>What you get when you sign up!</h1>
-          <Map/>
+          <img src={Map} style={{height: '700px', width: '700px', borderRadius: '20px'}} alt="skill map"/>
         </PageTransition>
   </Layout>
 )
