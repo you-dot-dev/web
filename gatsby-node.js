@@ -23,6 +23,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             frontmatter {
               slug
               video_url
+              image
             }
           }
         }
@@ -55,6 +56,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         context: {
           // additional data can be passed via context
           slug: node.frontmatter.slug,
+          image: node.frontmatter.image
         },
       })
     }

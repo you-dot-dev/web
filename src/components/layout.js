@@ -13,6 +13,7 @@ import Header from "./header"
 import "./layout.scss"
 import "./horizontal-rule.scss"
 import './signinRegister.scss'
+import './article.scss'
 import './account.scss'
 
 const Layout = ({ children }) => {

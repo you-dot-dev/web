@@ -1,16 +1,15 @@
 ---
 slug: "/articles/getting-started"
 date: "2021-02-01 10:00:00"
-title: "Getting started in software development"
+title: "Getting started in Software Development"
 image: 'coding.jpg'
 author: "Paul Coe"
 ---
 
-# Getting started in software development
-
+10 minute read
 ## Welcome to you.dev
 
-My name is Paul and I'm here to help you become a software developer.
+<p class="center">My name is Paul and I'm here to help you become a software developer.<p>
 
 (This article / series will assume you are already comfortable with basic computer terminology and either [Microsoft Windows](https://www.microsoft.com/en-us/windows) or [Apple macOS](https://www.apple.com/macos).)
 
@@ -27,7 +26,7 @@ So where do we start?
 
 ## Step 1: Acquire tools
 
-Every software developer needs tools to get their job done. Some software projects require expensive proprietary tools, but **every** developer needs some free tools from the following categories:
+<p class="center">Every software developer needs tools to get their job done. Some software projects require expensive proprietary tools, but **every** developer needs some free tools from the following categories:</p>
 
 - **Text Editors** - for writing and editing source code.
 - **Web Browsers** - for testing and debugging your Web Application if you are building one.
