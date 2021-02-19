@@ -21,17 +21,31 @@ const Template = ({data}) => {
       <div className="blog-post-container">
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
-          <h4>{displayDate}</h4>
-          <img src={articleImage.fluid.originalImg} alt="article image"/>
-          <h4>{frontmatter.author}</h4>
+
+          <div className="article-card">
+            <img src={articleImage.fluid.originalImg} alt="article image"/>
+            <div className="article-card-content">
+              <h4>{frontmatter.author}</h4>
+              <h4>{displayDate}</h4>
+              <p><i class="fa fa-clock"></i>{frontmatter.time_to_read} minute read</p>
+            </div>
+          </div>
+
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
+      </div>
+      <div className="links blog-post-container">
+        <div className="comment">
         <i class="fa fa-thumbs-up helpful"></i>
         <i class="fa fa-comments helpful" aria-hidden="true"></i>
-      </div>
+        </div>
+        <div className="next">
+          <i class="fa fa-long-arrow-right helpful" aria-hidden="true">
+            </i></div>
+        </div>
     </Layout>
   )
 }
@@ -48,6 +62,7 @@ query ($slug: String!) {
       title
       author
       image
+      time_to_read
     }
   }
   allImageSharp {
