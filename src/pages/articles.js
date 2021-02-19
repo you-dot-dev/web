@@ -23,16 +23,16 @@ const Articles = ({data}) => {
     const displayDate = new Date(article.frontmatter.date).toDateString();
 
     return (
-      <div className="article-link">
+      <a href={article.frontmatter.slug} className="article-link">
         <div className="article-img" style={{
           background: `url(${articleImage.fluid.originalImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center center"
         }}></div>
-        <h3><a href={article.frontmatter.slug}>{article.frontmatter.title}</a></h3>
+        <h3>{article.frontmatter.title}</h3>
         <p>{displayDate}</p>
         <p>{article.excerpt}</p>
-      </div>
+      </a>
     );
   });
 
