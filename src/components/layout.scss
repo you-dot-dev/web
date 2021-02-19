@@ -529,12 +529,22 @@ header {
   .article-link {
     width: 24%;
     padding: 15px;
+    font-family: "Nunito";
     box-sizing: border-box;
-    background-color: #fff;
-    border: 1px solid #333;
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in, border-color 0.2 ease-in;
     margin: 5px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:link, &:visited {
+      color:#333;
+    }
+    &:hover {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #333;
+    }
     
 
 
@@ -656,7 +666,7 @@ header {
     border-bottom-right-radius: 10px;
     background-color: rgb(32,209,126);
     min-width: 160px;
-    z-index: 1;
+    z-index: 1000;
 
     a {
       color: black;
@@ -699,7 +709,7 @@ header {
 }
 
 .team {
-  margin: 1em auto;
+  margin: 1em auto 0;
 	text-align: center;
   background-image: url('../images/gradient.svg');
   background-size: cover;
@@ -735,3 +745,45 @@ header {
 
 /* Map CSS */
 .leaflet-control-attribution {display: none;}
+
+// skill map styling on home page
+
+.sign-up-intro {
+  // display: flex;
+  // justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Nunito";
+  .marketing {
+    text-align: center;
+    color: white;
+
+  }
+  .skill-map-homepage {
+    background: radial-gradient(transparent 50%, rgba(0,0,0,0.4) 75%), linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/map-topics-homepage.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 960px; height: 400px;
+    margin: 0 auto;
+    padding: 5em;
+    border-radius: 20px;
+  }
+}
+
+.v1 {
+  border-bottom: 2px solid white;
+  width: 150px;
+  
+  margin:30px auto;
+}
+
+.gradient-section {
+  background: linear-gradient(to right, rgb(89, 213, 158), rgba(103, 225, 217));
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: 1em 0;
+  h1 {
+    color: white;
+  }
+}
