@@ -4,29 +4,23 @@ date: "2021-02-01 10:00:00"
 title: "Getting started in Software Development"
 image: 'coding.jpg'
 author: "Paul Coe"
+time_to_read: "10"
 ---
 
-10 minute read
+
 ## Welcome to you.dev
 
-<p class="center">My name is Paul and I'm here to help you become a software developer.<p>
-
-(This article / series will assume you are already comfortable with basic computer terminology and either [Microsoft Windows](https://www.microsoft.com/en-us/windows) or [Apple macOS](https://www.apple.com/macos).)
-
-Software applications are all about receiving, processing, and presenting information.
-
-That information can come in the form of text, photos, audio, video, 3D graphics, financial records, or basically anything that can be digitized.
-
-Software is written by software developers and engineers using a variety of programming languages suited for different purposes.
-
-Awesome!
-
-So where do we start?
+My name is Paul and I'm here to help you become a software developer.
+This article / series will assume you are already comfortable with basic computer terminology and either [Microsoft Windows](https://www.microsoft.com/en-us/windows) or [Apple macOS](https://www.apple.com/macos).
 
 
-## Step 1: Acquire tools
+Software applications are all about receiving, processing, and presenting information. That information can come in the form of text, photos, audio, video, 3D graphics, financial records, or basically anything that can be digitized. Software is written by software developers and engineers using a variety of programming languages suited for different purposes.
 
-<p class="center">Every software developer needs tools to get their job done. Some software projects require expensive proprietary tools, but **every** developer needs some free tools from the following categories:</p>
+<p class="center">Awesome! So where do we start?</p>
+
+## First let us acquire some tools
+
+Every software developer needs tools to get their job done. Some software projects require expensive proprietary tools, but **every** developer needs some free tools from the following categories:
 
 - **Text Editors** - for writing and editing source code.
 - **Web Browsers** - for testing and debugging your Web Application if you are building one.
@@ -55,11 +49,11 @@ Keep in mind you do not need to learn all these tools. This list covers tools fo
 	- [Emacs](https://www.gnu.org/software/emacs/) from the GNU Project
 	- [Vim](https://www.vim.org/) from Bram Moolenaar
 
----
+ <h2 className="divider line one-line">&lt; / &gt;</h2>
 
 **Web Browsers** are used for 
 
----
+ <h2 className="divider line one-line">&lt; / &gt;</h2>
 
 **IDEs** are for writing, testing, building, and packaging code. They have built-in text editors, sometimes have built-in device simulators. IDEs are generally for more advanced developers working on a specific platform. As a beginner, these can safely be ignored for awhile. Just a few examples for reference:
 
@@ -67,7 +61,7 @@ Keep in mind you do not need to learn all these tools. This list covers tools fo
 - [Microsoft Visual Studio](https://visualstudio.microsoft.com/) for developing Windows software primarily.
 - [Android Studio](https://developer.android.com/studio/) for developing Android mobile apps.
 
----
+ <h2 className="divider line one-line">&lt; / &gt;</h2>
 
 **Virtualization Tools** are for simulating the deployment of your software onto virtual servers or user devices that look and feel like the real thing. These "virtual machines" share your physical computer's resources, so having >8GB of memory and >4 processor cores in your computer is preferred. These are intermediate to advanced tools that should be learned a little later if you're just starting.
 
@@ -77,7 +71,7 @@ Just to be aware of them, here are a few of the popular tools in this space:
 - [VirtualBox](https://www.virtualbox.org/) - For running "heavyweight" virtual machines, complete with emulated hardware and a dedicated operating system.
 - [Vagrant](https://www.vagrantup.com/) - A tool for automating the creation and destruction of virtual machines.
 
----
+ <h2 className="divider line one-line">&lt; / &gt;</h2>
 
 **Terminals / Shells** are for interacting with local / remote services and systems among many other functions. Terminals can look intimidating at first as the interface is all text, no graphics. However, with a handful of trusty cheatsheets even a beginner developer can become powerful!
 
@@ -92,7 +86,7 @@ Here are some common terminals / shells:
 	- [cmd.exe]() from Microsoft (Built-in to Windows; from DOS era; not as featureful)
 	- [Cmder](https://cmder.net/) from Samuel Vasko,  Martin Kemp (A shinier Powershell)
 
----
+ <h2 className="divider line one-line">&lt; / &gt;</h2>
 
 That was probably a lot to take in for someone just getting started. Keep in mind, the above list of tools covers every need a professional developer could have for most projects. **You don't need to have them all or learn them all!** Some developers that build software exclusively for one platform can feasibly use just one IDE and nothing else.
 
