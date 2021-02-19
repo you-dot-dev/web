@@ -20,9 +20,13 @@ const Template = ({data}) => {
     <Layout>
       <div className="blog-post-container">
         <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
+          
 
           <div className="article-card">
+            <div className="article-card-header">
+              <h1>{frontmatter.title}</h1>
+            </div>
+              
             <img src={articleImage.fluid.originalImg} alt="article image"/>
             <div className="article-card-content">
               <h4>{frontmatter.author}</h4>
