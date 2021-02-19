@@ -92,9 +92,21 @@ const IndexPage = () => (
             <img className="img-2"src={Angelika} alt="angelika"/>
           </div>
         </div>
-
+        <section className="coming-soon gradient-section">
           <h1>What you get when you sign up!</h1>
-          <img src={Map} style={{height: '700px', width: '700px', borderRadius: '20px'}} alt="skill map"/>
+          <p style={{color:'rgb(32,209,126)'}}>Explore all avenues of software development</p>
+          </section>
+          <section className="sign-up-intro gradient-section">
+            
+            <div className="skill-map-homepage">
+              <div className="marketing">
+                <h2>Self guided learning </h2><div className="v1"></div>
+                <h2>Track your progress</h2><div className="v1"></div>
+                <h2>Different paths to different professional interests </h2>
+              </div>
+            </div>
+
+          </section>
         </PageTransition>
   </Layout>
 )
