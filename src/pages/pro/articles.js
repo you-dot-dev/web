@@ -23,20 +23,31 @@ const ProArticles = (props) => {
   useEffect( () => {
 
     async function getArticle(slug) {
-      const result = await axios.get(`http://localhost:7890/articles/${slug}`);
-      console.log("db result?.. ", result);
-      return result.data.article;
+      try {
+        const result = await axios.get(`http://localhost:7890/articles/${slug}`);
+        return result.data.article;
+      } catch (err) {
+        return err;
+      }
     }
 
     getArticle(slug).then( (article) => {
       setLoaded(true);
       console.log("article?:", article);
-      setAuthor(article.author);
-      setBody(article.body);
-      setDisplayDate(article.created_at);
-      setImage(article.image);
-      setTitle(article.title);
-      setTimeToRead(article.time_to_read);
+      if (article) {
+        const {author, body, created_at, image, title, time_to_read} = article;
+        setAuthor(article.author);
+        setBody(article.body);
+        setDisplayDate(article.created_at);
+        setImage(article.image);
+        setTitle(article.title);
+        setTimeToRead(article.time_to_read);
+      } else {
+        setAuthor("Not found");
+        console.log("no article");
+      }
+    }).catch( (err) => {
+      console.log("getArticle err:", err);
     });
 
     return () => {
