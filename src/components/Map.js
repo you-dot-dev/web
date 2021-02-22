@@ -16,8 +16,8 @@ const ZoneOverlay = (props) => {
 
   const map = useMap();
   const [zoomLevel, setZoomLevel] = useState(13);
-  const [zoneOpacity, setZoneOpacity] = useState(0.5);
-  const [signOpacity, setSignOpacity] = useState(0.5);
+  const [zoneOpacity, setZoneOpacity] = useState(0);
+  const [signOpacity, setSignOpacity] = useState(1);
 
   const mapEvents = useMapEvents({
     zoomend: (event) => {
@@ -62,7 +62,7 @@ const Map = ({children}) => {
   return (
     <MapContainer id={"skill-map"}
       center={[0.04, -0.02]}
-      minZoom={11} zoom={12} maxZoom={14}
+      minZoom={11} zoom={13} maxZoom={15}
       scrollWheelZoom={false}
       maxBounds={[[-0.5, -0.5],[0.75, 0.5]]}
       maxBoundsViscosity={1.0}
