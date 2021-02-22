@@ -8,31 +8,39 @@ time_to_read: "10"
 ---
 
 
-## Welcome to you.dev
+# Welcome to you.dev
 
 My name is Paul and I'm here to help you become a software developer.
 This article / series will assume you are already comfortable with basic computer terminology and either [Microsoft Windows](https://www.microsoft.com/en-us/windows) or [Apple macOS](https://www.apple.com/macos).
 
-
 Software applications are all about receiving, processing, and presenting information. That information can come in the form of text, photos, audio, video, 3D graphics, financial records, or basically anything that can be digitized. Software is written by software developers and engineers using a variety of programming languages suited for different purposes.
 
-<p class="center">Awesome! So where do we start?</p>
+<p class="center">Awesome! So where does one start as a beginner?</p>
 
-## First let us acquire some tools
-
-Every software developer needs tools to get their job done. Some software projects require expensive proprietary tools, but **every** developer needs some free tools from the following categories:
-
-- **Text Editors** - for writing and editing source code.
-- **Web Browsers** - for testing and debugging your Web Application if you are building one.
-- **IDEs** (**I**ntegrated **D**evelopment **E**nvironments) - for writing, testing, building, and packaging code. IDEs usually target specific platforms and are for generally for advanced developers and engineers. 
-- **Virtualization Tools** - for simulating the deployment of software to servers and user devices.
-- **Terminals / Shells** - for interacting with both local and remote services / systems among many other functions.
-
-Keep in mind you do not need to learn all these tools. This list covers tools for developers of every flavor. Some developers targeting a specific device or platform can feasibly get away with using "just" an IDE.
 
 ---
 
-**Text Editors** are for writing and editing source code. Each editor may have fancy features that others editors may not have, but ultimately **all text editors edit text**. As of this article's publish date in 2021, big names in the text editor world are:
+
+## Awareness of the tool landscape
+
+Every software developer needs tools to get their job done. Some software projects require expensive proprietary tools, but *every* developer needs some good, free tools from the following categories:
+
+- **Programming Languages** - for expressing computer instructions and interfaces. Languages as tools will come in the form of compilers and interpreters.
+- **Text Editors** - for writing and editing source code for software applications.
+- **Web Browsers** - for testing and debugging web sites and web applications. One should be provided with your OS. ([Safari](https://www.apple.com/safari/) on macOS, [Edge](https://www.microsoft.com/en-us/edge) on Windows, [Firefox](https://firefox.com/) on Unix-like Desktops)
+- **IDEs** (**I**ntegrated **D**evelopment **E**nvironments) - for writing, testing, building, and packaging code. IDEs generally target specific platforms and are for generally for advanced developers and engineers.
+- **Virtualization Tools** - for simulating the deployment of software to servers and user devices. *Virtual machines* for simulating servers / computers, *containers* for simulating server processes, and simulators for tablets, phones, etc. 
+- **Terminals / Shells** - for interacting with both local and remote services / systems among many other functions.
+
+> Keep in mind you do not need to learn all these tools at the same time. This list covers tools for developers of every flavor. Some developers targeting a specific device or platform can feasibly use *only* an IDE.
+
+
+---
+
+
+**Text Editors** are for writing and editing source code. Programmers' text editors will have features such as highlighting language keywords, "folding blocks" so you can temporarily hide code, etc. Some text editors may features you prefer over another, but ultimately **all text editors edit text**.
+
+>As of this article's publish date in 2021, big names in the text editor world are:
 
 - **Free on all systems**
 	- [Sublime Text](https://www.sublimetext.com/) from Sublime HQ (solid; occassional nag to buy license, but easy to ignore)
@@ -43,25 +51,38 @@ Keep in mind you do not need to learn all these tools. This list covers tools fo
 	- [TextMate](https://macromates.com/) from MacroMates (Solid free editor)
 	- [TextEdit](https://support.apple.com/guide/textedit/welcome/mac) is built-in to macOS in case you can't access the internet. (very basic functionality)
 - **Windows exclusive**
-	- [notepad++](https://notepad-plus-plus.org/) from Don Ho (Must-have for Windows devs and sys admins)
+	- [notepad++](https://notepad-plus-plus.org/) from Don Ho. This is a must-have for Windows devs and sys admins)
+	- [PSPad](https://www.pspad.com/) from Jan Fiala. Another solid free editor.
 	- [Notepad](https://www.microsoft.com/en-us/p/windows-notepad/9msmlrh6lzf3) from Microsoft. Built-in Windows plain text editor in case of emergency.
 - **Arcane terminal editors for hot-shots**
 	- [Emacs](https://www.gnu.org/software/emacs/) from the GNU Project
 	- [Vim](https://www.vim.org/) from Bram Moolenaar
 
- <h2 className="divider line one-line">&lt; / &gt;</h2>
 
-**Web Browsers** are used for 
+---
 
- <h2 className="divider line one-line">&lt; / &gt;</h2>
 
-**IDEs** are for writing, testing, building, and packaging code. They have built-in text editors, sometimes have built-in device simulators. IDEs are generally for more advanced developers working on a specific platform. As a beginner, these can safely be ignored for awhile. Just a few examples for reference:
+**Web Browsers** are used for accessing resources on the Internet. The browser's three main functions are:
+
+- Hypertext Transfer Protocol (HTTP) Client
+- Document Object Model (DOM) renderer
+- and Javascript engine
+
+HTTP used for requesting web resources over the network. The DOM renderer is used to display the web resources on the screen. The Javascript engine is used for controlling the DOM annd processing information. Browsers usually include many handy developers tools, too.
+
+
+---
+
+
+**IDEs** are for writing, testing, building, and packaging code. They have built-in text editors, sometimes have built-in device simulators. IDEs are generally for more advanced developers working on a specific platform. As a beginner, these can safely be ignored for awhile. Here are a few leading IDEs for reference:
 
 - [Apple Xcode](https://developer.apple.com/xcode/) for developing macOS and iOS software.
 - [Microsoft Visual Studio](https://visualstudio.microsoft.com/) for developing Windows software primarily.
 - [Android Studio](https://developer.android.com/studio/) for developing Android mobile apps.
 
- <h2 className="divider line one-line">&lt; / &gt;</h2>
+
+---
+
 
 **Virtualization Tools** are for simulating the deployment of your software onto virtual servers or user devices that look and feel like the real thing. These "virtual machines" share your physical computer's resources, so having >8GB of memory and >4 processor cores in your computer is preferred. These are intermediate to advanced tools that should be learned a little later if you're just starting.
 
@@ -71,7 +92,9 @@ Just to be aware of them, here are a few of the popular tools in this space:
 - [VirtualBox](https://www.virtualbox.org/) - For running "heavyweight" virtual machines, complete with emulated hardware and a dedicated operating system.
 - [Vagrant](https://www.vagrantup.com/) - A tool for automating the creation and destruction of virtual machines.
 
- <h2 className="divider line one-line">&lt; / &gt;</h2>
+
+---
+
 
 **Terminals / Shells** are for interacting with local / remote services and systems among many other functions. Terminals can look intimidating at first as the interface is all text, no graphics. However, with a handful of trusty cheatsheets even a beginner developer can become powerful!
 
@@ -86,7 +109,9 @@ Here are some common terminals / shells:
 	- [cmd.exe]() from Microsoft (Built-in to Windows; from DOS era; not as featureful)
 	- [Cmder](https://cmder.net/) from Samuel Vasko,  Martin Kemp (A shinier Powershell)
 
- <h2 className="divider line one-line">&lt; / &gt;</h2>
+
+---
+
 
 That was probably a lot to take in for someone just getting started. Keep in mind, the above list of tools covers every need a professional developer could have for most projects. **You don't need to have them all or learn them all!** Some developers that build software exclusively for one platform can feasibly use just one IDE and nothing else.
 
