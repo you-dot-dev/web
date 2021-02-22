@@ -63,7 +63,7 @@ const SkillMap = () => {
     <Layout>
       <PageTransition>
         <Map>
-          <Marker position={[0.04, -0.02]}>
+          <Marker position={[0.02, -0.012]}>
             <Popup>
               Getting Started
             </Popup>
