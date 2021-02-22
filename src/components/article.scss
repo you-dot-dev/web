@@ -1,10 +1,46 @@
 .blog-post-container {
-  max-width:900px;
+  max-width:960px;
   margin: 0 auto;
   font-family:'Nunito';
   line-height: 1.6;
-  
+  background-color: #efefef;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+
+  .article-card {
+    background: whitesmoke;
+    display: flex;
+
+    .article-card-title {
+      color: white;
+      padding: 2em 3em;
+      flex-basis: 100%;
+      background: rgba(0,0,0,0.5);
+      background-size: cover;
+    }
+
+    .article-card-content {
+      background-color: white;
+      padding: 2em;
+      flex-basis: 20em;
+
+      :first-child {
+        font-size: larger;
+      }
+
+      :nth-child(2) {
+        font-size: smaller;
+        margin-bottom: 0.5em;
+      }
+
+      i {
+        color: lightslategrey;
+        margin-right: 0.5em;
+      }
+    }
+  }
+
   .blog-post {
+    padding: 2em 4em;
     h1 {
       font-size: 40px;
       text-align: center;
@@ -16,55 +52,57 @@
       height: 200px;
       margin: 0 auto;
     }
-    .article-card {
+    blockquote {
       background: whitesmoke;
-      margin: 0 auto 2em;
-      width: 600px;
-
-      .article-card-content {
-        padding: 2em;
-        :first-child {
-          font-size: larger;
-        }
-        :nth-child(2) {
-          font-size: smaller;
-          margin-bottom: 0.5em;
-        }
-        i {
-          color: lightslategrey;
-          margin-right: 0.5em;
-        }
-      }
+      margin: 20px 50px;
+      font-size: smaller;
     }
   }
+
   .blog-post-content{
 
     font-size:20px;
 
-    h2{
+    h2 {
       font-size: 30px;
       text-align:center;
       margin-bottom: 0.75em;
     }
-    
-    p {
-      
-      margin-bottom: 1em;
+
+    > p {
       &:first-of-type {
         text-align: center;
-        margin: 0 6em 1.75em;
+        max-width: 650px;
+        margin: 0 auto 2em;
       }
     }
-    
+
+    p {
+      margin-bottom: 1em;
+    }
+
     a {
-      color:grey;
-      border-bottom-color: rgba(127,127,127,0);
+      color: rgb(32,209,126);
+      border-bottom-color: rgba(32,209,126,0);
       border-bottom-style: dashed;
       border-bottom-width: 2px;
-      
-      transition: border-bottom-color 0.25s;
+
+      transition: border-bottom-color 0.25s, color 0.25s;
       &:hover {
-        border-bottom-color: rgba(127,127,127,1);
+        color: rgba(32,209,126,1);
+        border-bottom-color: rgba(32,209,126,1);
+      }
+      &:active {
+        color: rgba(10,10,10,1);
+        border-bottom-color: rgba(10,10,10,1);
+      }
+      &:visited {
+        color: rgba(127,127,127,1);
+        border-bottom-color: rgba(127,127,127,0);
+        &:hover {
+          color: rgba(127,127,127,1);
+          border-bottom-color: rgba(127,127,127,1);
+        }
       }
     }
 
@@ -88,7 +126,7 @@
       }
     }
   }
-  
+
   .center{
     text-align: center;
     padding:5px;
