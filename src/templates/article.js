@@ -19,28 +19,27 @@ const Template = ({data}) => {
   return (
     <Layout>
       <div className="blog-post-container">
-        <div className="blog-post">
-          
 
-          <div className="article-card">
-            <div className="article-card-header">
-              <h1>{frontmatter.title}</h1>
-            </div>
-              
-            <img src={articleImage.fluid.originalImg} alt="article image"/>
-            <div className="article-card-content">
-              <h4>{frontmatter.author}</h4>
-              <h4>{displayDate}</h4>
-              <p><i class="fa fa-clock"></i>{frontmatter.time_to_read} minute read</p>
-            </div>
+        <div className="article-card" style={{backgroundImage: `url(${articleImage.fluid.originalImg})`,backgroundSize: `cover` }}>
+          <div className="article-card-title">
+            <h1>{frontmatter.title}</h1>
           </div>
+          <div className="article-card-content">
+            <h4>{frontmatter.author}</h4>
+            <h4>{displayDate}</h4>
+            <p><i class="fa fa-clock"></i>{frontmatter.time_to_read} minute read</p>
+          </div>
+        </div>
 
+        <div className="blog-post">
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
-      </div>
+
+      </div>{/* blog-post-container */}
+
       <div className="links blog-post-container">
         <div className="comment">
         <i class="fa fa-thumbs-up helpful"></i>
@@ -48,8 +47,9 @@ const Template = ({data}) => {
         </div>
         <div className="next">
           <i class="fa fa-long-arrow-right helpful" aria-hidden="true">
-            </i></div>
+            </i>
         </div>
+      </div>
     </Layout>
   )
 }
