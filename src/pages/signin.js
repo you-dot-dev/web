@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react'
-import Layout from '../components/layout'
-import AuthContext from '../contexts/auth/AuthContext'
-import { navigate } from 'gatsby'
+import Layout from '../components/layout';
+import AuthContext from '../contexts/auth/AuthContext';
+import { navigate, Link} from 'gatsby';
 import Spinner from '../components/spinner';
 import PageTransition from 'gatsby-plugin-page-transitions';
 
@@ -39,8 +39,8 @@ const SignIn = (props) => {
       <PageTransition>
   <div className="signin-container">
      
-      <h1>welcome back</h1>
-          <p> ready to make some progress?</p>
+      <h1>welcome back to you.dev</h1>
+          <p>ready to make some progress?</p>
   
       { loading ? <Spinner/> : null}
       <div className='inputWithIcon'>
@@ -64,13 +64,25 @@ const SignIn = (props) => {
         <i className="fa fa-key"></i>
         </div>
       
-
+        
       <button
         className="signin-btn"
         type="submit"
         onClick={(e) => {handleSubmit(e)}}>sign in</button>
         <br/>
-    </div>
+      </div>  
+
+      <div className="outside-signin">
+        <div className="button">
+        <button>sign in with google <i class="fab fa-google"></i></button><br/>
+       
+        </div>
+        <div className="button">
+        <button>sign in with github <i class="fab fa-github"></i></button>
+        </div>
+      </div>
+        <p className="signin-container register-container">don't have an account? <Link to='/register'>register here</Link></p>
+    
 
     </PageTransition>
     </Layout>
