@@ -79,7 +79,7 @@ const Footer = () => {
   </ul>
   
   <div class="legal">
-    <p>&copy; 2021 YouDev &copy;. All rights reserved.</p>
+    <p>&copy; 2021 YouDev. All rights reserved.</p>
     
     <div class="legal__links">
       <span>Made with <span class="heart">♥</span> remotely from Los Gatos, CA.</span>
