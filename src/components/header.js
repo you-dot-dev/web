@@ -1,13 +1,29 @@
 import { Link } from "gatsby"
-import {useContext} from 'react'
+import {useContext, useEffect} from 'react'
 import PropTypes from "prop-types"
 import React from "react"
 import AuthContext from '../contexts/auth/AuthContext';
 import youDevLogo from "../images/you-dev-header-logo.png";
+import axios from "axios";
 
 const Header = ({ siteTitle }) => {
 
   const authContext = useContext(AuthContext);
+
+  useEffect(() => {
+    
+    axios.get("http://localhost:7890/auth/userinfo", {withCredentials: true})
+    .then( (res) => {
+      console.log("res?", res);
+    })
+    .catch( (err) => {
+      console.log("Err?", err)
+    })
+    
+    return () => {
+      console.log("Cleaning up");
+    }
+  }, [])
 
   const { user } = authContext;
   console.log('user', user)
