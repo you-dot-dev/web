@@ -4,6 +4,7 @@ import AuthContext from '../contexts/auth/AuthContext';
 import { navigate, Link} from 'gatsby';
 import Spinner from '../components/spinner';
 import PageTransition from 'gatsby-plugin-page-transitions';
+import SEO from "../components/seo";
 
 const SignIn = (props) => {
 
@@ -36,6 +37,7 @@ const SignIn = (props) => {
 
   return (
     <Layout>
+      <SEO title="Signin"/>
       <PageTransition>
   <div className="signin-container">
      

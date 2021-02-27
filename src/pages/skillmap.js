@@ -2,6 +2,7 @@ import React, { Fragment, useState, useRef } from 'react'
 import '../components/skill-map.scss';
 import Layout from '../components/layout';
 import Zones from "../images/zones-01.svg";
+import SEO from "../components/seo"
 import ZoneText from "../images/zone-text-01.svg";
 import SignText from "../images/sign-text-01.svg";
 import Signs from "../images/signs-01.svg";
@@ -61,6 +62,7 @@ const SkillMap = () => {
 
   return (
     <Layout>
+      <SEO title='Skill Map'/>
       <PageTransition>
         <Map>
           <Marker position={[0.02, -0.012]}>

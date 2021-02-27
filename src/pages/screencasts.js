@@ -37,7 +37,7 @@ const Screencasts = ({data}) => {
   return (
     <Layout>
     <PageTransition>
-    <SEO title="Page two" />
+    <SEO title="Screen Casts" />
     <div className="article-header">
       <h1>Available Screencasts</h1>
       <p>An extensive and comprehensive list of screencasts by the author. <br/> Subscribe to view 100+ in-depth collections on all topics regarding software architecure and applications.</p>

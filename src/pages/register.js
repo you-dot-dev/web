@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react'
 import Layout from '../components/layout'
 import AuthContext from '../contexts/auth/AuthContext'
 import youDevLogo from '../../assets/you-dev-logo.png'
+import SEO from "../components/seo"
 
 const Register = () => {
 
@@ -34,6 +35,7 @@ const Register = () => {
 
   return (
     <Layout>
+      <SEO title="Register"/>
 <div className="register-container">
 
   <div className="register">
