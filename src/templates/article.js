@@ -4,8 +4,6 @@ import Layout from "../components/layout"
 
 const Template = ({data}) => {
 
-  console.log("data?", data);
-
   const { markdownRemark, allImageSharp } = data;
   const { html, frontmatter } = markdownRemark;
 
