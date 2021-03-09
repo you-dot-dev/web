@@ -7,8 +7,8 @@ import ZoneText from "../images/zone-text-01.svg";
 import SignText from "../images/sign-text-01.svg";
 import Signs from "../images/signs-01.svg";
 import PageTransition from 'gatsby-plugin-page-transitions';
-import Map from "../components/Map";
-import { MapContainer, ImageOverlay, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
+//import Map from "../components/Map";
+//import { MapContainer, ImageOverlay, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 
 const DEFAULT_BOUNDS = [[-1,-1], [1,1]];
 
@@ -64,18 +64,6 @@ const SkillMap = () => {
     <Layout>
       <SEO title='Skill Map'/>
       <PageTransition>
-        <Map>
-          <Marker position={[0.02, -0.012]}>
-            <Popup>
-              Getting Started
-            </Popup>
-          </Marker>
-          <Marker position={[0.0, 0.01]} className={"completed"}>
-            <Popup>
-              <iframe title="HTML" width={"560"} height={"315"} src={"https://www.youtube.com/embed/Pr_-AudwsNU"} frameborder={"0"} allow={"autoplay; clipboard-write; encrypted-media; picture-in-picture"} allowfullscreen={true}></iframe>
-            </Popup>
-          </Marker>
-        </Map>
       </PageTransition>
     </Layout>
   )
