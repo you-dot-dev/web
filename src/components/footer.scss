@@ -4,6 +4,18 @@
   padding: 30px 30px 20px 30px;
   color: #fff;
   background-color:black;
+  input {
+    width:75%;
+    background-color: black;
+    border: 1px solid white;
+    
+    &:focus {
+      outline: 1px solid cyan;
+    }
+  }
+  button {
+    width:75%;
+  }
 }
 
 .footer > * {

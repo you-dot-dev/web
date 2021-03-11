@@ -7,13 +7,11 @@ const Footer = () => {
 <footer class="footer">
   <div class="footer__addr">
     <img src={youDevLogo} alt="youdev logo"/>
-        
-    <h2>Contact</h2>
-    
-    <address>
-      P.O Box 123456<br/>
-          
-      <a class="footer__btn" href="mailto:paul@you.dev">Email Us</a></address>
+   
+      <p>Subscribe to our monthly newsletter</p>
+      <input type='text' placeholder='Enter Email'/>
+      <button>Subscribe</button>
+
   </div>
   
   <ul class="footer__nav">
