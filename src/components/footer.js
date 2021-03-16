@@ -1,7 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import youDevLogo from "../images/you-dev-header-logo.png";
+import axios from "axios";
 
 const Footer = () => {
+
+  const [email, setEmail] = useState('');
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const sendMail = async () => {
+
+    const validEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+
+    if (validEmail.test(email)) {
+      const response = await axios.post("http://localhost:7890/mail/signup", {
+        email
+      });
+    } else {
+      alert("Not a valid email!");
+    }
+    
+    
+
+  }
+
   return (
 
 <footer class="footer">
@@ -9,8 +33,8 @@ const Footer = () => {
     <img src={youDevLogo} alt="youdev logo"/>
    
       <p>Subscribe to our monthly newsletter</p>
-      <input type='text' placeholder='Enter Email'/>
-      <button>Subscribe</button>
+      <input value={email} onChange={(e) => handleChange(e)} type='email' placeholder='Enter Email'/>
+      <button onClick={() => sendMail()} >Subscribe</button>
 
   </div>
   
