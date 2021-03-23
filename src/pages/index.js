@@ -30,6 +30,28 @@ const IndexPage = (props) => {
       <div className="home-page-header">
       <div className="typewriter">
       <h1 className='typewriter-header'>FUN AND FAST FULL-STACK <br/> TRAINING FOR </h1>
+      { typeof(window) !== 'undefined' ?
+      <TypeWriterEffect
+        className="typewriter"
+        textStyle={{
+                    color: '#fff',
+                      fontFamily: 'Nunito',
+                      fontWeight: 1000,
+                      fontSize: '5em',
+                    }}
+        startDelay={2000}
+        cursorColor="#fff"
+        multiText={[
+                   'Beginners',
+                   'Developers',
+                   'Designers',
+                   'Engineers'
+                  ]}
+        nextTextDelay={2000}
+        typeSpeed={50}
+        loop={true}
+      /> : null }
+
       </div>
       <img src={youDevLogo} className="homepage-logo" alt="logo"/>
    </div>
