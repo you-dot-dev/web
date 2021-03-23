@@ -7,12 +7,11 @@ import ZoneText from "../images/zone-text-01.svg";
 import SignText from "../images/sign-text-01.svg";
 import Signs from "../images/signs-01.svg";
 import PageTransition from 'gatsby-plugin-page-transitions';
-//import Map from "../components/Map";
-//import { MapContainer, ImageOverlay, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
+import Map from "../components/Map";
+import { MapContainer, ImageOverlay, Marker, Popup, useMap, useMapEvents } from 'react-leaflet';
 
 const DEFAULT_BOUNDS = [[-1,-1], [1,1]];
 
-/*
 const ZoneOverlay = (props) => {
 
   const map = useMap();
@@ -55,7 +54,7 @@ const ZoneOverlay = (props) => {
       <ImageOverlay url={Signs}   zIndex={2} bounds={DEFAULT_BOUNDS} opacity={SignsOpacity} />
     </Fragment>
   );
-} */
+}
 
 
 const SkillMap = () => {
@@ -64,6 +63,7 @@ const SkillMap = () => {
     <Layout>
       <SEO title='Skill Map'/>
       <PageTransition>
+      <Map />
       </PageTransition>
     </Layout>
   )
