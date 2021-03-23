@@ -50,7 +50,7 @@ const ZoneOverlay = (props) => {
     <Fragment>
       <ImageOverlay url={ZoneText}   zIndex={6} bounds={DEFAULT_BOUNDS} opacity={zoneOpacity} />
       <ImageOverlay url={Zones}      zIndex={5} bounds={DEFAULT_BOUNDS} opacity={zoneOpacity} />
-      <ImageOverlay url={SignText}      zIndex={4} bounds={DEFAULT_BOUNDS} opacity={signOpacity} />
+      <ImageOverlay url={SignText}   zIndex={4} bounds={DEFAULT_BOUNDS} opacity={signOpacity} />
       <ImageOverlay url={Signs}      zIndex={3} bounds={DEFAULT_BOUNDS} opacity={signOpacity} />
     </Fragment>
   );
@@ -59,21 +59,25 @@ const ZoneOverlay = (props) => {
 
 const Map = ({children}) => {
 
-  return (
-    <MapContainer id={"skill-map"}
-      center={[0.04, -0.02]}
-      minZoom={11} zoom={13} maxZoom={15}
-      scrollWheelZoom={false}
-      maxBounds={[[-0.5, -0.5],[0.75, 0.5]]}
-      maxBoundsViscosity={1.0}
-    >
-      <ZoneOverlay />
-      <ImageOverlay url={CloudLayer} zIndex={10} bounds={DEFAULT_BOUNDS} />
-      <ImageOverlay url={Freeland}   zIndex={1}  bounds={DEFAULT_BOUNDS} />
-      <ImageOverlay url={TheSea}     zIndex={0}  bounds={DEFAULT_BOUNDS} />
-      { children }
-    </MapContainer>
-  )
+  if (typeof window !== "undefined") {
+    return (
+      <MapContainer id={"skill-map"}
+        center={[0.04, -0.02]}
+        minZoom={11} zoom={13} maxZoom={15}
+        scrollWheelZoom={false}
+        maxBounds={[[-0.5, -0.5],[0.75, 0.5]]}
+        maxBoundsViscosity={1.0}
+      >
+        <ZoneOverlay />
+        <ImageOverlay url={CloudLayer} zIndex={10} bounds={DEFAULT_BOUNDS} />
+        <ImageOverlay url={Freeland}   zIndex={1}  bounds={DEFAULT_BOUNDS} />
+        <ImageOverlay url={TheSea}     zIndex={0}  bounds={DEFAULT_BOUNDS} />
+        { children }
+      </MapContainer>
+    );
+  } else {
+    return null;
+  }
 }
 
 export default Map;
