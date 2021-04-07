@@ -64,7 +64,6 @@ query ($slug: String!) {
       title
       author
       image
-      time_to_read
     }
   }
   allImageSharp {
