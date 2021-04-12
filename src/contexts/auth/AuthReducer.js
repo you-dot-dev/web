@@ -3,7 +3,8 @@ import {
   REGISTER_USER_FAIL,
   REGISTER_USER_SUCCESS,
   SIGNIN_USER_SUCCESS,
-  SIGNIN_USER_FAIL
+  SIGNIN_USER_FAIL,
+  LOGOUT_USER
 } from "../types";
 
 export default (state, action) => {
@@ -33,6 +34,12 @@ export default (state, action) => {
       }
     case SIGNIN_USER_FAIL:
       return{
+        ...state,
+        isAuthenticated: false,
+        user: {}
+      }
+    case LOGOUT_USER:
+      return {
         ...state,
         isAuthenticated: false,
         user: {}
