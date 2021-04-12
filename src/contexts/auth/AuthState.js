@@ -36,9 +36,10 @@ const AuthState = (props) => {
       let user = await axios.post( "http://localhost:7890/auth/register",
         formData, { headers: {'Content-Type' : 'application/json'} }
         );
-        console.log("user?:", user);
+        console.log("user from registerUser?:", user);
         dispatch({
-          type: REGISTER_USER_SUCCESS
+          type: REGISTER_USER_SUCCESS,
+          payload: user.data.user
         })
     } catch (error) {
       dispatch({
