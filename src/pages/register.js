@@ -1,4 +1,5 @@
 import React, {useState, useContext} from 'react'
+import { navigate } from 'gatsby';
 import Layout from '../components/layout'
 import AuthContext from '../contexts/auth/AuthContext'
 import youDevLogo from '../../assets/you-dev-logo.png'
@@ -17,7 +18,12 @@ const Register = () => {
 
   function handleSubmit(e){
     e.preventDefault();
-    registerUser({username, email, password});
+    try {
+      registerUser({username, email, password});
+      navigate("/skillmap");
+    } catch (err) {
+      console.log("err from registerUser", err);
+    }
     /*
     axios.post('http://localhost:7890/auth/register', {
       username,
