@@ -60,7 +60,7 @@ const Header = ({ siteTitle }) => {
             <div className="dropdown-content">
               <Link to='/account'>Account</Link>
               <Link>Settings</Link>
-              <Link>Logout</Link>
+              <Link to='/logout'>Logout</Link>
             </div> : 
              <div className="dropdown-content">
                <Link to='/signin'>Sign In</Link>
