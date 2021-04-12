@@ -91,6 +91,8 @@ const AuthState = (props) => {
   }
 
   const logoutUser = async () => {
+    const logoutResponse = await axios.get("http://localhost:7890/auth/logout");
+    console.log("logoutResponse", logoutResponse);
     dispatch({type: LOGOUT_USER});
   }
 
