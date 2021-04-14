@@ -16,6 +16,13 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [username, setUserName] = useState('');
 
+  const [criteriaHeight, setCriteriaHeight] = useState("0em");
+  const [hasCapital, setHasCapital] = useState(false);
+  const [hasNumber, setHasNumber] = useState(false);
+  const [hasMinimumChars, setHasMinimumChars] = useState(false);
+  const [hasSymbol, setHasSymbol] = useState(false);
+
+
   function handleSubmit(e){
     e.preventDefault();
     try {
@@ -37,7 +44,25 @@ const Register = () => {
      })
      .catch(err => console.log(err))
      */
-   }
+  }
+
+  function showPasswordDropdown(e) {
+    setCriteriaHeight("10em")
+  }
+  function hidePasswordDropdown(e) {
+    setCriteriaHeight("0px")
+  }
+  function checkPassword(password) {
+    console.log("checking password...");
+    const capitalRegex = /[A-Z]/;
+    const numberRegex = /[0-9]/;
+    const symbolRegex= /[!@#$%^&*()~]/;
+    const minLength = password.length > 8;
+    setHasCapital( capitalRegex.test(password) );
+    setHasNumber( numberRegex.test(password) );
+    setHasSymbol( symbolRegex.test(password) );
+    setHasMinimumChars( minLength );
+  }
 
   return (
     <Layout>
@@ -73,11 +98,22 @@ const Register = () => {
           type="password"
           name="password"
           placeholder="Enter password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => { setPassword(e.target.value); checkPassword(e.target.value) }}
+          onFocus={(e) => showPasswordDropdown(e)}
+          onBlur={(e) => hidePasswordDropdown(e)}
         />
         <i className="fa fa-key" aria-hidden="true"></i>
-        </div>
-      
+      </div>
+
+      <div className="password-criteria" style={{ height: criteriaHeight, overflow: "hidden" }}>
+        <ul>
+          <li>{ hasNumber ? "✅":"❗️"} One number</li>
+          <li>{ hasSymbol ? "✅":"❗️"} One symbol</li>
+          <li>{ hasCapital ? "✅":"❗️"} One capital letter</li>
+          <li>{ hasMinimumChars ? "✅":"❗️"} Minimum 8 characters</li>
+        </ul>
+      </div>
+
 
       <button
         className="signin-btn"
