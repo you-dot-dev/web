@@ -12,9 +12,14 @@ import {
   SIGNIN_USER_FAIL,
   REGISTER_USER_FAIL,
   REGISTER_USER_SUCCESS,
-  GET_PROFILE_PICTURE
+  GET_PROFILE_PICTURE,
+  GET_CURRENT_USER
 }  from '../types';
 
+
+const {
+  YOUDEV_API_URL
+} = process.env;
 
 const AuthState = (props) => {
 
@@ -47,6 +52,17 @@ const AuthState = (props) => {
         payload: error
       })
     }
+  }
+
+  const getCurrentUser = async () => {
+    const userinfoResponse = await axios.get(`${YOUDEV_API_URL}/auth/userinfo`, {
+      withCredentials: true
+    });
+    console.log("userInforesponse? ", userinfoResponse);
+    dispatch({
+      type: GET_CURRENT_USER,
+      payload: userinfoResponse.data
+    })
   }
 
   const getProfilePicture = async (email) => {
@@ -105,7 +121,8 @@ const AuthState = (props) => {
         registerUser,
         signInUser,
         logoutUser,
-        getProfilePicture
+        getProfilePicture,
+        getCurrentUser
       }}>
         {props.children}
     </AuthContext.Provider>

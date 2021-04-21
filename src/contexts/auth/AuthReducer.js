@@ -4,7 +4,8 @@ import {
   REGISTER_USER_SUCCESS,
   SIGNIN_USER_SUCCESS,
   SIGNIN_USER_FAIL,
-  LOGOUT_USER
+  LOGOUT_USER,
+  GET_CURRENT_USER
 } from "../types";
 
 export default (state, action) => {
@@ -21,6 +22,7 @@ export default (state, action) => {
         loading: false
       }
     case REGISTER_USER_SUCCESS:
+    case GET_CURRENT_USER:
       return {
         ...state,
         loading: false,
