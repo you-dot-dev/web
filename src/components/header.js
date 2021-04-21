@@ -9,23 +9,16 @@ import axios from "axios";
 const Header = ({ siteTitle }) => {
 
   const authContext = useContext(AuthContext);
+  const { user, getCurrentUser } = authContext;
 
   useEffect(() => {
-    
-    axios.get("http://localhost:7890/auth/userinfo", {withCredentials: true})
-    .then( (res) => {
-      console.log("res?", res);
-    })
-    .catch( (err) => {
-      console.log("Err?", err)
-    })
-    
+    getCurrentUser();
+
     return () => {
       console.log("Cleaning up");
     }
   }, [])
 
-  const { user } = authContext;
   console.log('user', user)
 
   return(
