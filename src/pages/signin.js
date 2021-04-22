@@ -22,7 +22,7 @@ const SignIn = (props) => {
   }
 
   function signinGoogle(e) {
-    axios.get(`${YOUDEV_API_URL}/auth/google`, { withCredentials: true })
+    axios.get(`${process.env.YOUDEV_API_URL}/auth/google`, { withCredentials: true })
       .then( ({data}) => {
         navigate(data.authorizationUrl);
       })
@@ -31,6 +31,15 @@ const SignIn = (props) => {
       });
   }
 
+  function signinGithub(e) {
+    axios.get(`${process.env.YOUDEV_API_URL}/auth/github`, { withCredentials: true })
+      .then( ({ data }) => {
+        navigate( data.authorizationUrl );
+      })
+      .catch( (err) => {
+        console.log("signinGithub err:", err)
+      });
+  }
 
   return (
     <Layout>
@@ -77,7 +86,7 @@ const SignIn = (props) => {
        
         </div>
         <div className="button">
-        <button>sign in with github <i class="fab fa-github"></i></button>
+        <button onClick={ (e) => {signinGithub(e)}}>sign in with github <i class="fab fa-github"></i></button>
         </div>
       </div>
         <p className="signin-container register-container">don't have an account? <Link to="/register">register here</Link></p>
