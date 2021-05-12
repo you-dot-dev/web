@@ -24,7 +24,10 @@ const {
 const AuthState = (props) => {
 
   const initialState = {
-    user: null,
+    user: {
+      username: "guest",
+      email: "guest"
+    },
     isAuthenticated: false,
     loading: false
   }
@@ -55,14 +58,19 @@ const AuthState = (props) => {
   }
 
   const getCurrentUser = async () => {
-    const userinfoResponse = await axios.get(`${YOUDEV_API_URL}/auth/userinfo`, {
+    const { data }= await axios.get(`${YOUDEV_API_URL}/auth/userinfo`, {
       withCredentials: true
     });
-    console.log("userInforesponse? ", userinfoResponse);
+    console.log("userinfo data? ", data);
+    if (data && data.id) {
+      data.isAuthenticated = true;
+    }
+
     dispatch({
       type: GET_CURRENT_USER,
-      payload: userinfoResponse.data
-    })
+      payload: data
+    });
+
   }
 
   const getProfilePicture = async (email) => {

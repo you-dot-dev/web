@@ -3,7 +3,7 @@ import {createContext} from 'react';
 const AuthContext = createContext({
   user: {
     username: "guest",
-    email: "guest@you.dev"
+    email: "guest"
   },
   isAuthenticated: false,
   loading: false
