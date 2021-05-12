@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import youDevLogo from '../../assets/you-dev-logo-white.png';
 import AuthContext from '../contexts/auth/AuthContext';
 
@@ -22,17 +22,17 @@ const Account = () => {
         <hr/>
         <div className="icons">
         <i class="fa fa-pencil" aria-hidden="true"></i>
-        <h3>Account Information</h3>
+        <h3><Link to="/account/info">Account Information</Link></h3>
         </div>
         <hr/>
         <div className="icons">
         <i class="fa fa-recycle" aria-hidden="true"></i>
-        <h3> Manage Subscription</h3>
+        <h3><Link to="/account/manage">Manage Subscription</Link></h3>
         </div>
         <hr/>
         <div className="icons">
         <i class="fa fa-credit-card" aria-hidden="true"></i> 
-        <h3>Payment Information</h3>
+        <h3><Link to="/account/payment">Payment Information</Link></h3>
         </div>
         <hr/>
         <div className="icons">
