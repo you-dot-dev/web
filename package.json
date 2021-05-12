@@ -10,6 +10,7 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^1.4.0",
     "@stripe/stripe-js": "^1.13.2",
+    "bootstrap": "^4.6.0",
     "gatsby": "^2.31.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-create-client-paths": "^2.10.0",
@@ -28,6 +29,7 @@
     "leaflet": "^1.7.1",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-leaflet": "^3.1.0",
